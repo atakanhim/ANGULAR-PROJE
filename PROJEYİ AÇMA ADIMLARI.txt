@@ -21,3 +21,7 @@ bunların önemi aslında var ama oluşan dosyaları silecegin için yok yes yes
 
 
 -DEGİŞİKLİK YAPIP İMPORT ETMEYİN EDİCEKSENİZ KENDİ BRANCHİNİZİ AÇIP ONA İMPORT EDİN MAİN BRANCH E ATMAYIN
+
+
+-- güncellemee "npm install alertifyjs --save" de yazın 
+
