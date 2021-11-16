@@ -1,0 +1,5 @@
+<h3>Yeni urun ekle - Reactive</h3>
+<form [formGroup]="productAddForm" (ngSubmit)="add()" class="input-group mb-3">
+    <div><input type="text" id="name" name="name" formControlName="name" class="form-control" placeholder="Urun Adi"></div>
+ 
+</form>

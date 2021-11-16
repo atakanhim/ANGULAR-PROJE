@@ -1,0 +1,11 @@
+.manualCategoryStyle{
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 5px 10px;
+}
+.manualCategoryStyle:hover{
+    color: #134;
+    font-size: 17px;
+    margin: 0;
+    border-bottom: 1px solid gray;
+}
