@@ -1,11 +1,15 @@
 .manualCategoryStyle{
+    font-style: italic;
+    font-family: Serif;
+    color: #484848;
     text-transform: uppercase;
     text-decoration: none;
-    margin: 5px 10px;
+    margin:0 10px;
+    font-size: 15px;
 }
 .manualCategoryStyle:hover{
-    color: #134;
-    font-size: 17px;
+    color: black;
+    font-size: 19px;
     margin: 0;
     border-bottom: 1px solid gray;
 }

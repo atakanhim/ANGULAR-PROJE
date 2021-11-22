@@ -1,6 +1,5 @@
 <!-- <h3 *ngIf="products; else noProduct" style="margin-top: 1em">{{ title }}</h3> -->
-<app-category></app-category>
-<div class="form-group">
+<div class="form-group" style="margin-top: 10px;">
   <input
     class="form-control"
     id="productName"
@@ -33,8 +32,8 @@
         {{ product.name }}
        
       </h5>
-      <h6> {{ product.price | currency: "USD":"symbol":"1.2-2" }}</h6>
-      <p class="card-text" style="height: 50px;overflow: auto;">
+      <h6> {{ product.price | currency: "₺ ":"symbol":"1.2-2" }}</h6>
+      <p class="card-text" style="height: 90px;overflow: auto;">
         {{ product.description }}
       </p>
 

@@ -1,10 +1,10 @@
 .productbox{
     margin: 10px 5px;
-    padding: 5px;
+    padding: 3px;
     transition: 0.5s;
 }
 .productbox:hover{
-    padding: 0px;
+    padding: 1px;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
