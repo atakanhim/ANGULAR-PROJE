@@ -1,12 +1,13 @@
 <ul class="nav flex-column">
   <li class="nav-item">
     <a
-      class="nav-link active"
+      class="nav-link"
       aria-current="page"
       routerLink="/products/"
       style="
+      color:rgb(39, 34, 34);
         text-align: center;
-        font-size: 2rem;
+        font-size: 36px;
         font-style: italic;
         font-family: Serif;
       "
@@ -17,15 +18,14 @@
   </li>
 
   <li class="nav-item">
-    <a class="nav-link manualCategoryStyle" routerLink="/products"> Tum Urunler </a>
+    <a class="nav-link manualCategoryStyle" routerLink="/products/"> Tum Urunler </a>
   </li>
   <li
     class="nav-item"
     *ngFor="let category of categories"
-    routerLink="/products/category/{{ category.id }}"
-    href="#"
+   
   >
-    <a class="nav-link manualCategoryStyle" routerLink="/product-add-1/">
+    <a class="nav-link manualCategoryStyle"  routerLink="/products/category/{{ category.id }}">
       {{ category.name }}
     </a>
   </li>
