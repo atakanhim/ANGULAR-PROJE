@@ -10,7 +10,9 @@ import { Category } from './category';
 })
 export class CategoryComponent implements OnInit {
   constructor(    
-    private categoryService:CategoryService) {}
+    private categoryService:CategoryService)
+     {}
+     
   title = 'Kategori listesi';
   categories: Category[] = [];
   ngOnInit(): void {

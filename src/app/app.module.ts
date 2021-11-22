@@ -11,7 +11,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductFilterPipe } from './product/product-filter.pipe';
 import { AlertifyService } from './services/alertify.service';
 import { ProductAddForms1Component } from './product/product-add-forms1/product-add-forms1.component';
-import { ProductAddForms2Component } from './product/product-add-forms2/product-add-forms2.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { ProductAddForms2Component } from './product/product-add-forms2/product-
     ProductComponent,
     ProductFilterPipe,
     ProductAddForms1Component,
-    ProductAddForms2Component
+    NavComponent
   ],
   imports: [
     BrowserModule,
