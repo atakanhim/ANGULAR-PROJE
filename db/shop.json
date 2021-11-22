@@ -3,60 +3,147 @@
     {
       "id": 1,
       "categoryId": 1,
-      "name": "Laptop",
-      "price": 3200,
-      "description": "Laptop itop",
-      "imageUrl": "https://media.istockphoto.com/photos/women-using-laptop-computer-picture-id1222160402?b=1&k=20&m=1222160402&s=170667a&w=0&h=mLvw9f_kepxmPHNSt1DR9AZD4fSu7Y4Fw6mNfrX_Hvs="
+      "name": "Asus X509UA-BR325",
+      "price": 4999,
+      "description": "Intel Core i3 7020U 4GB 256GB SSD Freedos 15.6' Taşınabilir Bilgisayar ",
+      "imageUrl": "https://productimages.hepsiburada.net/s/105/550/110000049060019.jpg/format:webp"
     },
     {
       "id": 2,
+      "categoryId": 1,
+      "name": "Dell Vostro 3500",
+      "price": 5300,
+      "description": "Intel Core i3 1115G4 8GB 256GB SSD Windows 10 Home 15.6' FHD Taşınabilir Bilgisayar",
+      "imageUrl": "https://productimages.hepsiburada.net/s/93/550/110000036235902.jpg/format:webp"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "name": "Lenovo IdeaPad Gaming 3",
+      "price": 11200,
+      "description": "AMD Ryzen 5 5600H 8GB 512GB SSD GTX 1650 Freedos 15.6' FHD Taşınabilir Bilgisayar",
+      "imageUrl": "https://productimages.hepsiburada.net/s/89/550/110000031944107.jpg/format:webp"
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "name": "Acer Nitro 5",
+      "price": 11200,
+      "description": "Intel Core i5 10300H 8GB 256GB SSD GTX1650TI Freedos 15.6' FHD Taşınabilir Bilgisayar",
+      "imageUrl": "https://productimages.hepsiburada.net/s/135/550/110000086172301.jpg/format:webp"
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "name": "Lenovo Ideapad 3",
+      "price": 11200,
+      "description": "Amd Ryzen 5 5500U 8GB 512GB SSD Freedos 15.6' FHD Taşınabilir Bilgisayar",
+      "imageUrl": "https://productimages.hepsiburada.net/s/89/550/110000031944107.jpg/format:webp"
+    },
+    {
+      "id": 6,
       "categoryId": 2,
-      "name": "logiTech",
-      "price": 24,
-      "description": "Mouseeeeeee",
-      "imageUrl": "https://media.istockphoto.com/photos/women-using-laptop-computer-picture-id1222160402?b=1&k=20&m=1222160402&s=170667a&w=0&h=mLvw9f_kepxmPHNSt1DR9AZD4fSu7Y4Fw6mNfrX_Hvs="
+      "name": "Samsung Galaxy Z Flip3",
+      "price": 11200,
+      "description": "Samsung Galaxy Z Flip3 5G 128 GB (Samsung Türkiye Garantili)",
+      "imageUrl": "https://productimages.hepsiburada.net/s/105/550/110000048203108.jpg/format:webp"
     },
     {
-      "name": "Telefon",
-      "description": "ıPhone 8 telefon",
-      "price": "8000",
-      "categoryId": "2",
-      "imageUrl": "https://productimages.hepsiburada.net/s/31/375/10352775823410.jpg",
-      "id": 3
+      "id": 7,
+      "categoryId": 2,
+      "name": "iPhone 12 Pro Max 256 GB",
+      "price": 11200,
+      "description": "iPhone 12 Pro Max 256 GB 6GB Ram , 6.7 inç ekran.",
+      "imageUrl": "https://productimages.hepsiburada.net/s/66/550/110000007422583.jpg/format:webp"
     },
     {
-      "name": "Telefon",
-      "description": "ıPhone 8 telefonıPhone 8 telefonıPhone 8 telefonıPhone 8 telefonıPhone 8 telefonıPhone 8 telefonıPhone 8 telefonıPhone 8 telefonıPhone 8 telefonıPhone 8 telefonıPhone 8 telefonıPhone 8 telefonıPhone 8 telefon",
-      "imageUrl": "https://productimages.hepsiburada.net/s/31/375/10352775823410.jpg",
-      "price": "80003",
-      "categoryId": "2",
-      "id": 4
+      "id": 8,
+      "categoryId": 2,
+      "name": "Xiaomi Mi 10T Pro 256 GB",
+      "price": 11523,
+      "description": "Xiaomi Mi 10T Pro 256 GB (Xiaomi Türkiye Garantili)",
+      "imageUrl": "https://productimages.hepsiburada.net/s/48/550/10940071936050.jpg/format:webp"
     },
     {
-      "name": "Telefon",
-      "description": "telefon g7 dir androiddir",
-      "imageUrl": "data:image/jpeg;base64,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",
-      "price": "1313131",
-      "categoryId": "2",
-      "id": 5
+      "id": 9,
+      "categoryId": 3,
+      "name": "Epson L850 Yazıcı",
+      "price": 4599,
+      "description": "Epson L850 Fotokopi + Tarayıcı + Mürekkep Tanklı Yazıcı",
+      "imageUrl": "https://productimages.hepsiburada.net/s/31/550/10326901030962.jpg/format:webp"
     },
     {
-      "name": "Telefon",
-      "description": "telefon g7asdsad dir androiddir",
-      "imageUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUSFRUVERIYGBgYGhgYGBIRERgYGBUYGhoZHBgYGRgcIy4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHjErISE0MTQ2NDQ0NDQ0NDYxNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDE0NDQ0NDQ0NDQxNP/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABAUCAwYBB//EAEkQAAIBAgEFCgoHBwQCAwAAAAECAAMRBAUGEiExEzIzQVFhcXOxsiI0UnKBkZOhwdEVQlNUkuHwBxYXIyRighSi0vFDlERjwv/EABoBAQADAQEBAAAAAAAAAAAAAAABAgQFAwb/xAAnEQACAgEEAgEDBQAAAAAAAAAAAQIRAwQSITFBUTIiYXEFExRCgf/aAAwDAQACEQMRAD8A+zREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBETwmAexKTG50YOgxWriUVhqKBtIg84W9pF/fjJ/3pfwt8oB0sTmv34yf96X8LfKeHPrJ424pfwv8oB00Tmf38yd97X8FT/jAz6yedmLX8D/APGAdNE5v9+cB96X8D/Kefvxk/70v4W+UA6WJR4LOrBVmC08VTLHUFLaJJ5BpWuZdwBE8Mqmy7SuVTTqEaiaNNnW/H4Q1e+CG0i2iVf0yv2Nb2f5x9Mr9jW9n+cmmRuXstIlX9ML9jW9n+cfTK/Y1fZ/nFMbl7LSJV/TK/Y1vZ/nPPptfsa3s/zjaxvj7LWJU/Ta/Y1vZfnFPL1EkK5ZCbAbqjICTqA0jquemNrG6Pst4ngM9kFhERAEREAREQBKfOfFmjhqrqSCFsCNoLELcc+uXE57PjxOr0p31ghnEZMzfw+gr1KKVHcB2asivYsL2UNqUC/Ft2m5kv6Bwn3PD/8Arp8pKwPB0",
-      "price": "1313131",
-      "categoryId": "1",
-      "id": 6
+      "id": 10,
+      "categoryId": 3,
+      "name": "HP Smart Tank Yazıcı",
+      "price": 2154,
+      "description": "HP Smart Tank 519 3YW73A Wi-Fi + Fotokopi + Tarayıcı Renkli Çok Fonksiyonlu Tanklı Yazıcı",
+      "imageUrl": "https://productimages.hepsiburada.net/s/133/550/110000084479307.jpg/format:webp"
+    },
+    {
+      "id": 11,
+      "categoryId": 3,
+      "name": "HP Ink Tank Yazıcı",
+      "price": 2038,
+      "description": "Xiaomi Mi 10T Pro 256 GB (Xiaomi Türkiye Garantili)",
+      "imageUrl": "https://productimages.hepsiburada.net/s/133/550/110000084479318.jpg/format:webp"
+    },
+    {
+      "id": 12,
+      "categoryId": 4,
+      "name": "Samsung 50AU7000",
+      "price": 6600,
+      "description": "Samsung 50AU7000 50' 125 Ekran Uydu Alıcılı Crystal 4K UHD Smart LED TV",
+      "imageUrl": "https://productimages.hepsiburada.net/s/94/550/110000036607848.jpg/format:webp"
+    },
+    {
+      "id": 13,
+      "categoryId": 4,
+      "name": "Samsung 40T5300",
+      "price": 2154,
+      "description": "Samsung 40T5300 40'' 101 Ekran Uydu Alıcılı Full HD Smart LED TV",
+      "imageUrl": "https://productimages.hepsiburada.net/s/39/550/10607203516466.jpg/format:webp"
+    },
+    {
+      "id": 14,
+      "categoryId": 4,
+      "name": "Vestel 55U9500",
+      "price": 4888,
+      "description": "Vestel 55U9500 55'' 139 Ekran Uydu Alıcılı 4K Ultra HD Smart LED TV",
+      "imageUrl": "https://productimages.hepsiburada.net/s/67/550/110000009296168.jpg/format:webp"
+    },
+    {
+      "id": 16,
+      "categoryId": 4,
+      "name": "Toshıba 32LL3C63DT",
+      "price": 6000,
+      "description": "Toshıba 32LL3C63DT 32' 80 Ekran Uydu Alıcılı Full HD Smart LED TV",
+      "imageUrl": "https://productimages.hepsiburada.net/s/122/550/110000071955830.jpg/format:webp"
+    },
+    {
+      "id": 17,
+      "categoryId": 4,
+      "name": "LG 49NANO816NA",
+      "price": 7000,
+      "description": "LG 49NANO816NA 49' 124 Ekran Uydu Alıcılı 4K Ultra HD Smart LED TV",
+      "imageUrl": "https://productimages.hepsiburada.net/s/42/550/10724335747122.jpg/format:webp"
     }
   ],
   "categories": [
     {
       "id": 1,
-      "name": "bilgisiyar"
+      "name": "Bilgisiyar"
     },
     {
       "id": 2,
-      "name": "elektronik"
+      "name": "Telefon"
+    },
+    {
+      "id": 3,
+      "name": "Yazıcı"
+    },{
+      "id": 4,
+      "name": "Televizyon"
     }
   ]
 }
