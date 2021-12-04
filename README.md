@@ -1,27 +1,37 @@
-# ShopDemoApp
+# *PROJE NASIL ÇALIŞTIRILIR*
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+# BİLGİSİYARINIZDA NODE.JS YUKLU OLMASI LAZIM GİDİN YÜKLEYİN VE GELİN
 
-## Development server
+###  CMD Açın ve alttakileri yazın
+   `npm i -g json-server` ve
+   `npm install -g @angular/cli` 
+   
+ Daha sonra proje olusturmak istediginiz klasöre gidin cd kullanarak ama ben cahilim diyosan oldugun yerde kal ben seni yönlendircem
+`cd desktop` yaz.
+>Masaüstündesin şuan masasın yani
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  Daha sonra
+`ng new my-app`  yaz.
+>my-app adında bir angular projesi olusturdun tebrikler kardşeim bu sana 2 tane soru soracak bunların önemi aslında var ama oluşan dosyaları silecegin için yok yes yes de geç.
 
-## Code scaffolding
+ >İndirdiğin zip dosyasındaki dosyaları kopyala/kes masaüstündeki dosyayanın içine yapıştır.
+ 
+ >Şuan proje hazır peki nasıl başlatıcan
+ 
+ >Önce json serveri başlatıp verileri bir çek kanka o yüzden
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  >visual code ile proje dosyasını bir aç , terminala gel 
+	terminal powershell ile açılabilir ama bende cmd ile çalışıyor bilmiyorum orda hata alıyom
+	o yüzden cmd açın sonra bunları yazın :
+  
+ ` npm install alertifyjs --save ` Projeye ekstra olarak yükledigim Alertify Kütüphanesini ekliyoruz
+ 
+ `cd db` ile database klasörün içine giriyoruz ve
+ `json-server shop.json` json-server aktifediyoruz 3000. portta
+- yeni bir terminal aç öbürünü kapatma açık kalsın 
+- açtığın terminalin yolu en son dosya adı olsun zaten öyledir büyük ihtimal dc klasörünün içinde olma
 
-## Build
+`ng serve --open` server açılacak bekleyin ve bitti bu kaaa
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## ATTENTION PLEASE !!
+ #### DEGİŞİKLİK YAPIP İMPORT ETMEYİN EDİCEKSENİZ KENDİ BRANCHİNİZİ AÇIP ONA İMPORT EDİN MAİN BRANCH E ATMAYIN
