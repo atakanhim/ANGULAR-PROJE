@@ -48,12 +48,12 @@ export class ProductAddForms2Component implements OnInit {
        this.productService.addProduct(this.product).subscribe((data) => {
         this.alertifyService.success(data.name+'Ürününü Veritabanına Ekleme işlemi başarılı');
       });
+
+      this.productAddForm.reset();
     }
     else
       this.alertifyService.warning('Lütfen Tüm Alanları Doldurunuz ');
     
-
-   
   }
 
 }
