@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from '../services/account.service';
 import { CategoryService } from '../services/category.service';
 import { Category } from './category';
 
@@ -9,7 +10,8 @@ import { Category } from './category';
   providers:[CategoryService]
 })
 export class CategoryComponent implements OnInit {
-  constructor(    
+  constructor(  
+    private accountservice:AccountService,  
     private categoryService:CategoryService)
      {}
      
@@ -20,5 +22,8 @@ export class CategoryComponent implements OnInit {
       this.categories = data;
     })
 
+  }
+  isLoggedin(){
+    return this.accountservice.isLoggedIn();
   }
 }

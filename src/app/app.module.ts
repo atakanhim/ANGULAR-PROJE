@@ -13,6 +13,9 @@ import { AlertifyService } from './services/alertify.service';
 import { ProductAddForms1Component } from './product/product-add-forms1/product-add-forms1.component';
 import { NavComponent } from './nav/nav.component';
 import { ProductAddForms2Component } from './product/product-add-forms2/product-add-forms2.component';
+import { LoginComponent } from './login/login.component';
+import { AccountService } from './services/account.service';
+import { LoginGuard } from './login/LoginGuard';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { ProductAddForms2Component } from './product/product-add-forms2/product-
     ProductFilterPipe,
     ProductAddForms1Component,
     ProductAddForms2Component,
-    NavComponent
+    NavComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,7 @@ import { ProductAddForms2Component } from './product/product-add-forms2/product-
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [AlertifyService],
+  providers: [AlertifyService,AccountService,LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
