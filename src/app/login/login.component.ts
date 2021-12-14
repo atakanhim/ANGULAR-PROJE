@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit {
     form.reset();// resetliyoruz yazılar siliniyor.
     
     this.alertifyservice.success("Giriş Başarılı Ana Sayfaya Yönlendiriliyorsunuz")
-    setTimeout(() => {
-      this.router.navigate(["products"]);
-    }, 2000);
+    // setTimeout(() => {
+    //   this.router.navigate(["products"]);
+    // }, 2000);
     
   }
 }

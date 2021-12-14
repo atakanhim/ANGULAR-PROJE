@@ -16,6 +16,9 @@ import { ProductAddForms2Component } from './product/product-add-forms2/product-
 import { LoginComponent } from './login/login.component';
 import { AccountService } from './services/account.service';
 import { LoginGuard } from './login/LoginGuard';
+import { ProductDelComponent } from './product/product-edit/product-del.component';
+import { ProductUpdateComponent } from './product/product-update/product-update.component';
+import { ProductUpdateFilterPipe } from './product/product-update/product-update-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { LoginGuard } from './login/LoginGuard';
     ProductAddForms1Component,
     ProductAddForms2Component,
     NavComponent,
-    LoginComponent
+    LoginComponent,
+    ProductDelComponent,
+    ProductUpdateComponent,
+    ProductUpdateFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,50 @@
+<h3 class="headerTitle">Ürün Düzenleme</h3>
+
+<div class="form-group" style="margin-top: 10px;">
+    <input
+    type="number"
+      class="form-control"
+      id="productName"
+      placeholder="Urun Ara"
+      [(ngModel)]="filterText"
+
+    />
+    <small *ngIf="filterText" class="form-text text-muted"
+      >Şuan <strong>{{ filterText }}</strong> nolu ürünü aradınız</small
+    >
+  </div> 
+  <button (click)="getProductWihtId(filterText)" type="submit" class="btn btn-primary" style="margin-top: 1%;" >Ürün Filtrele</button>
+
+  <div class="row">
+    <ng-template #noProduct>
+      <div class="alert alert-info" role="alert">Burada urun yohhh</div>
+    </ng-template>
+  
+    <div
+      *ngFor="let product of products"
+      class="card productbox"
+      style="width: 18rem;"
+    >
+      <img
+        [src]="product.imageUrl"
+        height="288px"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ product.name }}
+         
+        </h5>
+        <h6> {{ product.price | currency: "₺ ":"symbol":"1.2-2" }}</h6>
+        <p class="card-text" style="height: 90px;overflow: auto;">
+          {{ product.description }}
+        </p>
+  
+        <a class="btn btn-primary " routerLink="/product-update/">Ürün Güncelle</a>
+        <a class="btn btn-danger" (click)="deleteProduct(product.id)" style="float: right">Ürün Sil</a>
+      </div>
+    </div>
+  </div>
+
+
