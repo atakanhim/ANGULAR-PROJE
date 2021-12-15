@@ -16,7 +16,6 @@ export class AccountService {
     }
     return false
   }
-
   isLoggedIn(){
     return this.loggedIn
   }

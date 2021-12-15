@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
   filterText = '';
   title = 'Urun Listesi';
   products: Product[] = [];
-
+  sepet: Product[] = [];
   ngOnInit(): void {
 
     this.activatedRoute.params.subscribe(params=>{
@@ -27,10 +27,7 @@ export class ProductComponent implements OnInit {
         this.products = data;
       })
     })
-    
-
   }
-
   addToCard(product: Product) {
     this.alertifyService.success(product.name + ' Added');
   }

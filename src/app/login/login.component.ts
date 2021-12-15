@@ -16,14 +16,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   login(form:NgForm){
-    this.accountService.login(this.model);// login ediyoruz
-
-    form.reset();// resetliyoruz yazılar siliniyor.
-    
-    this.alertifyservice.success("Giriş Başarılı Ana Sayfaya Yönlendiriliyorsunuz")
-    setTimeout(() => {
-      this.router.navigate(["products"]);
-    }, 1200);
+    let value= this.accountService.login(this.model);// login ediyoruz
+    if(value){
+      form.reset();// resetliyoruz yazılar siliniyor.
+      this.alertifyservice.success("Giriş Başarılı Ana Sayfaya Yönlendiriliyorsunuz");
+      // setTimeout(() => {
+      //   this.router.navigate(["products"]);
+      // }, 1200);
+    }
+    else{
+      this.alertifyservice.error("Giriş Başarısız");
+    }
+  
     
   }
 }
