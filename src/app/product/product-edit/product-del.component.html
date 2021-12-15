@@ -13,7 +13,7 @@
       >Şuan <strong>{{ filterText }}</strong> nolu ürünü aradınız</small
     >
   </div> 
-  <button (click)="getProductWihtId(filterText)" type="submit" class="btn btn-primary" style="margin-top: 1%;" >Ürün Filtrele</button>
+  <button (click)="getProductWihtId(filterText)" type="submit" id="refresh" class="btn btn-primary" style="margin-top: 1%;" >Ürün Filtrele</button>
 
   <div class="row">
     <ng-template #noProduct>
@@ -41,10 +41,55 @@
           {{ product.description }}
         </p>
   
-        <a class="btn btn-primary " routerLink="/product-update/">Ürün Güncelle</a>
-        <a class="btn btn-danger" (click)="deleteProduct(product.id)" style="float: right">Ürün Sil</a>
+        <a class="btn btn-primary " id="cansel" data-bs-toggle="modal" (click)="thisProduct(product)" data-bs-target="#exampleModal">Ürün Güncelle</a>
+        <a class="btn btn-danger"  (click)="deleteProduct(product.id)" style="float: right">Ürün Sil</a>
       </div>
     </div>
   </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ürün Güncelle</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Urun Adı</label>
+            <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+           
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Urun Aciklama</label>
+            <input type="text" formControlName="description" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+           
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Urun Resmi</label>
+            <input type="text" formControlName="imageUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+           
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Urun Fiyatı</label>
+            <input type="text" formControlName="price" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+           
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Urun Kategorisi</label>
+            <input type="text" formControlName="categoryId" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+           
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="putProductData()">Güncelle</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
