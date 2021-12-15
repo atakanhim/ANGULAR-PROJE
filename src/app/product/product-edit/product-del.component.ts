@@ -45,11 +45,12 @@ export class ProductDelComponent implements OnInit {
       this.product= this.formValue.value as Product;
       this.productService.updateProduct(this.product,x).subscribe((data) => {
         this.alertifyService.success(this.product.name+' Ürününü  Update işlemi başarılı');//eski adı görünmesi istiyorsak product yeni ad ise data
+        this.getProductWihtId("");
       });
+      
       let ref = document.getElementById('cansel')
       ref?.click();
       this.formValue.reset();
-      this.getProductWihtId(this.filterText);
     }
     else
       this.alertifyService.warning('Lütfen Tüm Alanları Doldurunuz ');
