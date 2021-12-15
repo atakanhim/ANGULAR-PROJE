@@ -29,8 +29,11 @@ export class ProductDelComponent implements OnInit {
   filterText = '';
 
   ngOnInit(): void {
-   this.createProductAddForm();
-    this.getProductWihtId(this.filterText);
+    this.createProductAddForm();//form verileri dolduruyor
+    this.getProductWihtId(this.filterText);//urunler diziye ekleniyor
+    this.categoryService.getCategories().subscribe(data =>{ //categori servisinden categoriler çekiliyor
+      this.categories = data;
+    })
   }
   thisProduct(product:any){
     this.product=product;
@@ -38,11 +41,10 @@ export class ProductDelComponent implements OnInit {
   }
   putProductData(){
     if(this.formValue.valid){
-      alert("işlemde olan id: "+JSON.stringify(this.product.id));
       let x:any = JSON.stringify(this.product.id);
       this.product= this.formValue.value as Product;
       this.productService.updateProduct(this.product,x).subscribe((data) => {
-        this.alertifyService.success(data.name+' Ürününü  Update işlemi başarılı');
+        this.alertifyService.success(this.product.name+' Ürününü  Update işlemi başarılı');//eski adı görünmesi istiyorsak product yeni ad ise data
       });
       let ref = document.getElementById('cansel')
       ref?.click();

@@ -1,12 +1,20 @@
 {
   "products": [
     {
-      "name": "Dell Vostro 3500111",
-      "description": "Intel Core i3 1115G4 8GB 256GB SSD Windows 10 Home 15.6' FHD Taşınabilir Bilgisayar",
-      "imageUrl": "https://productimages.hepsiburada.net/s/93/550/110000036235902.jpg/format:webp",
-      "price": 5300,
+      "id": 1,
       "categoryId": 1,
-      "id": 2
+      "name": "Asus X509UA-BR325",
+      "price": 4999,
+      "description": "Intel Core i3 7020U 4GB 256GB SSD Freedos 15.6' Taşınabilir Bilgisayar ",
+      "imageUrl": "https://productimages.hepsiburada.net/s/105/550/110000049060019.jpg/format:webp"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Dell Vostro 3500",
+      "price": 5300,
+      "description": "Intel Core i3 1115G4 8GB 256GB SSD Windows 10 Home 15.6' FHD Taşınabilir Bilgisayar",
+      "imageUrl": "https://productimages.hepsiburada.net/s/93/550/110000036235902.jpg/format:webp"
     },
     {
       "id": 3,
@@ -87,6 +95,14 @@
       "price": 6600,
       "description": "Samsung 50AU7000 50' 125 Ekran Uydu Alıcılı Crystal 4K UHD Smart LED TV",
       "imageUrl": "https://productimages.hepsiburada.net/s/94/550/110000036607848.jpg/format:webp"
+    },
+    {
+      "id": 13,
+      "categoryId": 4,
+      "name": "Samsung 40T5300",
+      "price": 2154,
+      "description": "Samsung 40T5300 40'' 101 Ekran Uydu Alıcılı Full HD Smart LED TV",
+      "imageUrl": "https://productimages.hepsiburada.net/s/39/550/10607203516466.jpg/format:webp"
     },
     {
       "id": 14,

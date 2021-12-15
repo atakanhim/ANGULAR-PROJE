@@ -59,28 +59,30 @@
         <form [formGroup]="formValue">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Urun Adı</label>
-            <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1">
            
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Urun Aciklama</label>
-            <input type="text" formControlName="description" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" formControlName="description" class="form-control" id="exampleInputEmail1" >
            
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Urun Resmi</label>
-            <input type="text" formControlName="imageUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" formControlName="imageUrl" class="form-control" id="exampleInputEmail1" >
            
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Urun Fiyatı</label>
-            <input type="text" formControlName="price" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" formControlName="price" class="form-control" id="exampleInputEmail1">
            
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Urun Kategorisi</label>
-            <input type="text" formControlName="categoryId" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-           
+            <select class="form-control"  formControlName="categoryId" required
+                   id="categoryId" name="categoryId">
+            <option *ngFor="let category of categories" [value]="category.id" >{{category.name}}</option>
+        </select>
           </div>
         </form>
       </div>
