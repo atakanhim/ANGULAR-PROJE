@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Attribute, Component, OnInit } from '@angular/core';
 import { AccountService } from '../services/account.service';
 import { CategoryService } from '../services/category.service';
 import { Category } from './category';
@@ -23,7 +23,7 @@ export class CategoryComponent implements OnInit {
     })
 
   }
-  isLoggedin(){
-    return this.accountservice.isLoggedIn();
+  isAdminIn(){
+    return this.accountservice.isAdminIn();
   }
 }

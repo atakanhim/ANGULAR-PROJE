@@ -11,23 +11,31 @@ import { Login } from './login';
 })
 export class LoginComponent implements OnInit {
   model:Login = new Login();
+  adminControl:boolean=false;
   constructor(private accountService:AccountService,private alertifyservice:AlertifyService,private router:Router) { }
 
   ngOnInit(): void {
   }
   login(form:NgForm){
+    try{
+      this.accountService.login(this.model).subscribe(data=>{
+        this.alertifyservice.success("Giris Basarili Hos Geldiniz \n"+data.user.username);
+        localStorage.setItem("Token",data.jwt);
+        localStorage.setItem("Yetki",data.user.yetki);
+      
 
-    this.accountService.login(this.model).subscribe(data=>{
-      this.alertifyservice.success("Giris Basarili Hos Geldiniz");
-      localStorage.setItem("Token",data.jwt);
-      setTimeout(() => {
-        this.router.navigate(["products"]);
-      }, 1200);
-    })
+        setTimeout(() => {
+          this.router.navigate(["products"]);
+        }, 1200);
+      })
+    }
+    catch{
+      this.alertifyservice.success("Lütfen Bilgileri Kontrol Ediniz");
+    }
+   
     form.reset();// resetliyoruz yazılar siliniyor.
-  
-    
-     
-  
+  }
+  isAdmin(){
+    return this.adminControl;
   }
 }

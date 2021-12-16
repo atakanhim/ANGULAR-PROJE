@@ -39,12 +39,17 @@ export class SignInComponent implements OnInit {
     if(this.UserAddForm.valid){
       this.usr =this.UserAddForm.value as User;
       console.log(this.usr);
-      this.accountService.addUser(this.usr).subscribe(data => {
-        this.alertifyService.success("baraşıyla eklendi");
-        localStorage.setItem("Token",data.jwt);
-        
-        this.router.navigate(["products"]);
-      })
+      try {
+        this.accountService.addUser(this.usr).subscribe(data => {
+          this.alertifyService.success("baraşıyla eklendi");
+          localStorage.setItem("Token",data.jwt);
+          console.log(data);
+          this.router.navigate(["products"]);
+        })
+      } catch (error) {
+        this.alertifyService.success("Uye olma basarisiz"+error);
+      }
+      
     }
     else{
       this.alertifyService.warning("tum verileri giriniz");

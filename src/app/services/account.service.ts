@@ -11,6 +11,7 @@ export class AccountService {
 
   constructor(private http: HttpClient) { }
   path = environment.API_URL;
+
   CheckToken(): Observable<any>{
     const httpOptions = {
       headers: new HttpHeaders({
@@ -46,8 +47,15 @@ export class AccountService {
 
     else return false;
   }
+  isAdminIn(){
+    if(localStorage.getItem("Yetki")=="admin")
+    return true;
+
+    else return false;
+  }
   logOut(){
     localStorage.removeItem("Token");
+    localStorage.removeItem("Yetki");
   }
   
 }
