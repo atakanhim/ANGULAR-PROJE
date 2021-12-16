@@ -4,15 +4,15 @@
       <h1 class="h3 mb-3 fw-normal">Giriş Yap</h1>
   
       <div class="form-floating">
-        <input type="text" #userName="ngModel" [(ngModel)]="model.userName" class="form-control" id="userName" name="usurName" placeholder="Kullanıcı adıs" required autofocus>
-        <label for="floatingInput">Kullanıcı adı</label>
+        <input type="text" #userName="ngModel" [(ngModel)]="model.identifier" class="form-control" id="email" name="email" placeholder="E-Mail" required autofocus>
+        <label for="floatingInput">E-Mail</label>
       </div>
       <div class="form-floating" style="margin-top: 3%;">
         <input type="password" class="form-control" id="password" #password="ngModel" [(ngModel)]="model.password" name="password" placeholder="Şifre" required>
         <label for="floatingPassword">Password</label>
       </div>
-  
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <a class="nav-link"   routerLink="/app-sign-in/">Uye Ol</a>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign On</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2021-2022</p>
     </form>
   </main>

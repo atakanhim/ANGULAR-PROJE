@@ -1,4 +1,5 @@
 export class User{
-    userName:string | undefined;
-    password:string | undefined;
+    username!:string;
+    email!:string;
+    password!:string;
 }

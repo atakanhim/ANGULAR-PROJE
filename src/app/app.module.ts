@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { AccountService } from './services/account.service';
 import { LoginGuard } from './login/LoginGuard';
 import { ProductDelComponent } from './product/product-edit/product-del.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { ProductDelComponent } from './product/product-edit/product-del.componen
     NavComponent,
     LoginComponent,
     ProductDelComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,

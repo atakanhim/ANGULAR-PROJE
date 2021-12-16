@@ -5,14 +5,17 @@ import { LoginGuard } from './login/LoginGuard';
 import { ProductAddForms2Component } from './product/product-add-forms2/product-add-forms2.component';
 import { ProductDelComponent } from './product/product-edit/product-del.component';
 import { ProductComponent } from './product/product.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
   {path:'products',component : ProductComponent},
-  {path:'product-add-2',component : ProductAddForms2Component,canActivate:[LoginGuard]},
+  {path:'product-add',component : ProductAddForms2Component,canActivate:[LoginGuard]},
   {path:'product-edit',component : ProductDelComponent,canActivate:[LoginGuard]},
+  {path:'login',component : LoginComponent},
+  {path:'app-sign-in',component : SignInComponent},
   {path:'',redirectTo:'products',pathMatch:'full'},
-  {path:'products/category/:categoryId',component : ProductComponent},
-  {path:'login',component : LoginComponent}
+  {path:'products/category/:categoryId',component : ProductComponent}
+ 
 ];
 
 @NgModule({

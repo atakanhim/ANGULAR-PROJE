@@ -9,9 +9,8 @@ export class LoginGuard implements CanActivate {
         
     }
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-        let logged = this.accountService.isLoggedIn();
-         if(logged){
-           
+        let logged = this.accountService.isLoggedIn();// bunun yerine adminmi diye sorarız
+         if(logged){        
             return true
          } 
          this.router.navigate(["login"]);

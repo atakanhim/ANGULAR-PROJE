@@ -1,0 +1,25 @@
+<h3 class="headerTitle">Uye ol</h3>
+
+<form [formGroup] ="UserAddForm" (ngSubmit) = "addUser()" class="form-group">
+    <div class="input-group mb-3">
+        <input formControlName="username" class="form-control" placeholder="User Name"
+            name="username" id="username" required />
+        
+    </div>
+    <div *ngIf ="UserAddForm.get('usurname')?.hasError('required') && UserAddForm.get('usurname')?.dirty" class="alert alert-danger">Usur Name Zorunludur</div>
+    <div class="input-group mb-3">
+        <input formControlName="email" class="form-control" placeholder="Email"
+            name="Email" id="Email" required />
+        
+    </div>
+    <div *ngIf ="UserAddForm.get('email')?.hasError('required') && UserAddForm.get('email')?.dirty" class="alert alert-danger">Email Zorunludur</div>
+    <div class="input-group mb-3">
+        <input formControlName="password" class="form-control" placeholder="Password"
+            name="password" id="password" required />
+        
+    </div>
+    <div *ngIf ="UserAddForm.get('password')?.hasError('required') && UserAddForm.get('password')?.dirty" class="alert alert-danger">Password Zorunludur</div>
+   
+    <button type="submit" class="btn btn-primary" >Kayıt Ol</button>
+
+</form>
