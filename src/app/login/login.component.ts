@@ -17,21 +17,24 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   login(form:NgForm){
-    try{
-      this.accountService.login(this.model).subscribe(data=>{
-        this.alertifyservice.success("Giris Basarili Hos Geldiniz \n"+data.user.username);
-        localStorage.setItem("Token",data.jwt);
-        localStorage.setItem("Yetki",data.user.yetki);
-      
-
-        setTimeout(() => {
-          this.router.navigate(["products"]);
-        }, 1200);
-      })
+  
+    if(this.accountService.isLoggedIn()){
+      this.alertifyservice.error("Zaten Giriş Yapmışsınız Bir Daha Giriş Yapamazsınız \n");
     }
-    catch{
-      this.alertifyservice.success("Lütfen Bilgileri Kontrol Ediniz");
+    else{
+      try{
+        this.accountService.login(this.model).subscribe(data=>{
+          this.alertifyservice.success("Giris Basarili Hos Geldiniz \n"+data.user.username);
+          localStorage.setItem("Token",data.jwt);
+          localStorage.setItem("Yetki",data.user.yetki);
+            this.router.navigate(["products"]);
+        })
+      }
+      catch{
+        this.alertifyservice.warning("Lütfen Bilgileri Kontrol Ediniz");
+      }
     }
+  
    
     form.reset();// resetliyoruz yazılar siliniyor.
   }

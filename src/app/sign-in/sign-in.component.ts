@@ -41,8 +41,9 @@ export class SignInComponent implements OnInit {
       console.log(this.usr);
       try {
         this.accountService.addUser(this.usr).subscribe(data => {
-          this.alertifyService.success("baraşıyla eklendi");
+          this.alertifyService.success("Uye Olma Basarili Hos Geldiniz \n"+data.user.username);
           localStorage.setItem("Token",data.jwt);
+          localStorage.setItem("Yetki",data.user.yetki);
           console.log(data);
           this.router.navigate(["products"]);
         })

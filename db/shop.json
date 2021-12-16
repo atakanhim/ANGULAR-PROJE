@@ -1,14 +1,6 @@
 {
   "products": [
     {
-      "name": "Asus X509UA-BR3251",
-      "description": "Intel Core i3 7020U 4GB 256GB SSD Freedos 15.6' Taşınabilir Bilgisayar ",
-      "imageUrl": "https://productimages.hepsiburada.net/s/105/550/110000049060019.jpg/format:webp",
-      "price": 4999,
-      "categoryId": 1,
-      "id": 1
-    },
-    {
       "name": "Dell Vostro 3500",
       "description": "Intel Core i3 1115G4 8GB 256GB SSD Windows 10 Home 15.6' FHD Taşınabilir Bilgisayar",
       "imageUrl": "https://productimages.hepsiburada.net/s/93/550/110000036235902.jpg/format:webp",
