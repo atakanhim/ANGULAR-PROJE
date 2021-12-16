@@ -34,6 +34,15 @@
             ]
           },
           "configurations": {
+            "developer": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.developer.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
             "production": {
               "budgets": [
                 {
@@ -46,7 +55,7 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
-              ],
+              ], 
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -71,6 +80,9 @@
           "configurations": {
             "production": {
               "browserTarget": "shopDemoApp:build:production"
+            },
+            "developer": {
+              "browserTarget": "shopDemoApp:build:developer"
             },
             "development": {
               "browserTarget": "shopDemoApp:build:development"

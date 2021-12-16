@@ -1,14 +1,10 @@
-
 .productbox{
-    margin: 10px 5px;
-    padding: 3px;
-    transition: 0.5s;
+    margin: 10px;
+    padding: 6px;
+    transition: 0.8s ease-in-out;
 }
 .productbox:hover{
-    padding: 1px;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
+    transition: 0.8s ease-in-out;
+    transform: scale(1.1);
+
 }

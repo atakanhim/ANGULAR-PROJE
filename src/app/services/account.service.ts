@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.developer';
 import { Login } from '../login/login';
 import { User } from '../login/user';
 
@@ -48,14 +48,14 @@ export class AccountService {
     else return false;
   }
   isAdminIn(){
-    if(localStorage.getItem("Yetki")=="admin")
+    if(environment.yetki=="admin")
     return true;
 
     else return false;
   }
   logOut(){
     localStorage.removeItem("Token");
-    localStorage.removeItem("Yetki");
+    environment.yetki="";
   }
   
 }

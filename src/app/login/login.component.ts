@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.developer';
 import { AccountService } from '../services/account.service';
 import { AlertifyService } from '../services/alertify.service';
 import { Login } from './login';
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
         this.accountService.login(this.model).subscribe(data=>{
           this.alertifyservice.success("Giris Basarili Hos Geldiniz \n"+data.user.username);
           localStorage.setItem("Token",data.jwt);
-          localStorage.setItem("Yetki",data.user.yetki);
+          environment.yetki=data.user.yetki;
             this.router.navigate(["products"]);
         })
       }

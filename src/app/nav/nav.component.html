@@ -3,8 +3,12 @@ class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" style="w
 >
 <img src="../../assets/galeri/1.png" width="380px" height="60px" alt="Him ElektronikLogosu" routerLink="/products/" style="cursor:pointer;" />
   
-
+<button class="btn btn-primary" style="float: right;" routerLink="/app-cart">
+  <i class="fa fa-cart-plus" style="font-size:30px;"></i>
+  <div style="font-size:13px;margin-left: 1px;" class="badge bg-danger" >{{totalItem}}</div>
+</button>
 <div class="navbar-nav">
+ 
   <div class="nav-item text-nowrap">
     <a *ngIf= "isLoggedin()==false" class="nav-link px-3" routerLink="/login">Login</a>
   </div>

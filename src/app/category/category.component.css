@@ -10,10 +10,11 @@
     border-radius: 10%;
     border-top: 1px solid rgb(39, 34, 34);
     border-bottom: 1px solid rgb(39, 34, 34);
+    transition: 0.3s ease-in-out;
 }
 .manualCategoryStyle:hover{
     color: black;
-    font-size: 21px;
-    margin: 0 15px;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
     border-radius: 15%;
 }

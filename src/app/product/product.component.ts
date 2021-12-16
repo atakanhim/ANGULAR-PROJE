@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AlertifyService } from '../services/alertify.service';
+import { CartService } from '../services/cart.service';
 import { ProductService } from '../services/product.service';
 import { Product } from './product';
 
@@ -14,21 +15,28 @@ export class ProductComponent implements OnInit {
   constructor(
     private alertifyService: AlertifyService,
     private productService:ProductService,
-    private activatedRoute:ActivatedRoute
+    private activatedRoute:ActivatedRoute,
+    private cartService:CartService,
+
     ) {}
   filterText = '';
   title = 'Urun Listesi';
   products: Product[] = [];
   sepet: Product[] = [];
   ngOnInit(): void {
-
     this.activatedRoute.params.subscribe(params=>{
       this.productService.getProducts(params["categoryId"]).subscribe(data=>{
         this.products = data;
+       
+        this.products.forEach((a:any)=>{
+            Object.assign(a,{quantity:1,total:a.price});
+        });
+      
       })
     })
   }
-  addToCard(product: Product) {
+  addToCard(product: any) {
     this.alertifyService.success(product.name + ' Added');
+    this.cartService.addToCart(product);
   }
 }

@@ -18,6 +18,7 @@ import { AccountService } from './services/account.service';
 import { LoginGuard } from './login/LoginGuard';
 import { ProductDelComponent } from './product/product-edit/product-del.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     LoginComponent,
     ProductDelComponent,
     SignInComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
