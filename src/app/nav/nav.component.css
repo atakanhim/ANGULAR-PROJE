@@ -28,3 +28,24 @@
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
   }
 
+.manualCategoryStyle{
+  color:#B5B6B8;
+  margin-right: 40px;
+  text-align: center;
+  font-size: 17px;
+  font-family: Serif;
+  transition: 1s;
+  border-radius: 7%;
+  border-top: 3px solid gray;
+}
+.manualCategoryStyle:hover{
+  transform: scale(1.1);
+  border-top: 1px solid #ffffff;;
+  border-radius: 14%;
+  transition: 0.5s;
+  color:#B5B6B8;
+  text-align: center;
+  font-size: 17px;
+  font-family: Serif;
+
+}

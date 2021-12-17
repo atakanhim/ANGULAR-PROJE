@@ -12,9 +12,19 @@ class=" navbar-dark sticky-top bg-dark p-0 shadow" style="width: 100%;height: 75
   <div class="nav-item text-nowrap">
     <a *ngIf= "isLoggedin()==true" (click)= "LogOut()" class="nav-link px-3" routerLink="/products">LogOut</a>
   </div>
+  
 </div>
+
 <button class="btn btn-primary"  style="background-color: transparent;border:0px;float: right;margin-top: 15px;" routerLink="/app-cart">
   <i class="fa fa-cart-plus" style="font-size:30px;"></i>
   <div style="font-size:13px;margin-left: 1px;" class="badge bg-danger" >{{totalItem}}</div>
 </button>
+  <div style="float: right; margin-top: 15px;" *ngIf= "isAdminIn()==true">
+    <a class="nav-link text-nowrap manualCategoryStyle"  style="float: right;"  routerLink="/product-add/">URUN EKLE </a>
+    <a class="nav-link text-nowrap manualCategoryStyle"   style="float: right;"  routerLink="/product-edit/">URUN EDIT PANELI </a>
+  </div>
+  
+
 </header>
+
+

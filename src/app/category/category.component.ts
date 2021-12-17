@@ -23,7 +23,5 @@ export class CategoryComponent implements OnInit {
     })
 
   }
-  isAdminIn(){
-    return this.accountservice.isAdminIn();
-  }
+
 }

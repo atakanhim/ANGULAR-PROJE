@@ -24,4 +24,7 @@ export class NavComponent implements OnInit {
   LogOut(){
     this.accountservice.logOut();
   }
+  isAdminIn(){
+    return this.accountservice.isAdminIn();
+  }
 }
