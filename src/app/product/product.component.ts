@@ -22,13 +22,14 @@ export class ProductComponent implements OnInit {
   filterText = '';
   title = 'Urun Listesi';
   products: Product[] = [];
-  sepet: Product[] = [];
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params=>{
       this.productService.getProducts(params["categoryId"]).subscribe(data=>{
         this.products = data;
        
         this.products.forEach((a:any)=>{
+          let toplam:number  = 0;
+        
             Object.assign(a,{quantity:1,total:a.price});
         });
       
