@@ -1,0 +1,46 @@
+<h3 class="headerTitle">Yeni Ürün Ekle</h3>
+<div class="row">
+    <div class="col">
+        <form [formGroup] = "productAddForm" (ngSubmit) = "add()" class="form-group" style="width: 70%;margin: 50px auto">
+            <div class="input-group mb-3">
+                <input formControlName="name" class="form-control" placeholder="Ürün Adi"
+                    name="name" id="name" required />
+                
+            </div>
+            <div *ngIf ="productAddForm.get('name')?.hasError('required') && productAddForm.get('name')?.dirty" class="alert alert-danger">Urun Adi Zorunludur</div>
+            <div class="input-group mb-3">
+                <input formControlName="description" class="form-control" placeholder="Açıklama"
+                    name="description" id="description" required />
+                
+            </div>
+            <div *ngIf ="productAddForm.get('description')?.hasError('required') && productAddForm.get('description')?.dirty" class="alert alert-danger">Urun Açıklaması Zorunludur</div>
+            <div class="input-group mb-3">
+                <input formControlName="imageUrl" class="form-control" placeholder="Ürün Resmi" [(ngModel)]="imageUrl" (change)= "showImage()"
+                    name="imageUrl" id="imageUrl" required />
+                  <i id="onizleBtn" class="btn btn-primary resimOnizleme " (click)= "changeDisplayImg()" >{{onIzleme}}</i> 
+                   
+                
+            </div>
+            <div *ngIf ="productAddForm.get('imageUrl')?.hasError('required') && productAddForm.get('imageUrl')?.dirty" class="alert alert-danger">Urun Resmi Zorunludur</div>
+            <div class="input-group mb-3">
+                <input formControlName="price" class="form-control" placeholder="Ürün Fiyati"
+                    name="price" id="price" required />
+                
+            </div>
+            <div *ngIf ="productAddForm.get('price')?.hasError('required') && productAddForm.get('price')?.dirty" class="alert alert-danger">Urun Fiyat Zorunludur</div>
+            <div class="input-group mb-3">
+                <select class="form-control"  formControlName="categoryId" required
+                id="categoryId" name="categoryId">
+                    <option *ngFor="let category of categories" [value]="category.id" >{{category.name}}</option>
+                </select>
+            </div>
+            <div *ngIf ="productAddForm.get('categoryId')?.hasError('required') && productAddForm.get('categoryId')?.touched" class="alert alert-danger">Urun Kategorisi Zorunludur</div>
+            <button type="submit" class="btn btn-primary" style="display: block;margin: 0 auto;" >Ürün Ekle</button>
+        
+        </form>
+    </div>
+    <div class="col">
+        <img id="resim" width="300px" height="400px" style="display: none;"/>
+    </div>
+</div>
+

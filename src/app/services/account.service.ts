@@ -48,14 +48,14 @@ export class AccountService {
     else return false;
   }
   isAdminIn(){
-    if(environment.yetki=="admin")
+    if(localStorage.getItem("Yetki")==="admin")
     return true;
 
     else return false;
   }
   logOut(){
     localStorage.removeItem("Token");
-    environment.yetki="";
+    localStorage.removeItem("Yetki");
   }
   
 }

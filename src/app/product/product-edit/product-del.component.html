@@ -1,23 +1,27 @@
 <h3 class="headerTitle">Ürün Düzenleme</h3>
 
-<div class="form-group" style="margin-top: 10px;">
+<div class="form-group" style="margin-top: 10px;text-align: center;">
     <input
     type="number"
+    style="width: 50%;display: block;margin:0 auto"
       class="form-control"
       id="productName"
       placeholder="Ürün id ile ürün ara"
       [(ngModel)]="filterText"
 
     />
-    <small *ngIf="filterText" class="form-text text-muted"
+    <small *ngIf="filterText" class="form-text text-muted" style="display: block;"
       >Şuan <strong>{{ filterText }}</strong> nolu ürünü aradınız</small
     >
   </div> 
-  <button (click)="getProductWihtId(filterText)" type="submit" id="refresh" class="btn btn-primary" style="margin-top: 1%;" >Ürün Filtrele</button>
+  <div style="text-align: center;margin: 1%;">
+    <button (click)="getProductWihtId(filterText)" type="submit" id="refresh" class="btn btn-primary" >Ürün Filtrele</button>
+  </div>
 
-  <div class="row">
+
+  <div class="row" style="margin:0 0.9%;">
     <ng-template #noProduct>
-      <div class="alert alert-info" role="alert">Burada urun yohhh</div>
+      <div class="alert alert-info" role="alert">Burada urun yok</div>
     </ng-template>
   
     <div

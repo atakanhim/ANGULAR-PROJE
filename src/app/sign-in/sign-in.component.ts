@@ -43,7 +43,7 @@ export class SignInComponent implements OnInit {
         this.accountService.addUser(this.usr).subscribe(data => {
           this.alertifyService.success("Uye Olma Basarili Hos Geldiniz \n"+data.user.username);
           localStorage.setItem("Token",data.jwt);
-          environment.yetki=data.user.yetki;
+          localStorage.setItem("Yetki",data.user.yetki);
           console.log(data);
           this.router.navigate(["products"]);
         })

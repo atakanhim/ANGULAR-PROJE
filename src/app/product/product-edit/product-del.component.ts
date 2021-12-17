@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
-import { catchError, filter } from 'rxjs/operators';
 import { Category } from 'src/app/category/category';
 import { AlertifyService } from 'src/app/services/alertify.service';
 import { CategoryService } from 'src/app/services/category.service';
@@ -16,7 +14,6 @@ import { Product } from '../product';
 })
 export class ProductDelComponent implements OnInit {
   constructor(
-    private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
     private categoryService: CategoryService,
     private alertifyService: AlertifyService,

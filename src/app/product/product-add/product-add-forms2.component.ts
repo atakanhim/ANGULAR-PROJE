@@ -18,11 +18,13 @@ export class ProductAddForms2Component implements OnInit {
     private formBuilder:FormBuilder,
     private categoryService: CategoryService,
     private productService: ProductService,
-    private alertifyService: AlertifyService
+    private alertifyService: AlertifyService,
     ) { }
     categories: Category[] = [];
     productAddForm: FormGroup = new FormGroup({});
     product : Product = new Product();
+    imageUrl:any="";
+    onIzleme:string="Ön İzleme Aç";
 
     createProductAddForm(){
       this.productAddForm = this.formBuilder.group({
@@ -55,5 +57,24 @@ export class ProductAddForms2Component implements OnInit {
       this.alertifyService.warning('Lütfen Tüm Alanları Doldurunuz ');
     
   }
-
+  showImage(){
+    let resim = document.getElementById("resim");
+    resim?.setAttribute("src",this.imageUrl);
+  }
+  changeDisplayImg(){
+    let resim = document.getElementById("resim");
+    let btn = document.querySelector("#onizleBtn");
+    let btnInnerHtml = btn?.innerHTML;
+    console.log(btnInnerHtml);
+    if(btnInnerHtml === "Ön İzleme Aç"){
+      btn?.setAttribute("style","border: 3px solid rgba(245, 9, 9, 0.568)");
+      resim?.setAttribute("style","display:block;");
+      this.onIzleme="Ön İzleme Kapa";
+    }
+    if(btnInnerHtml === "Ön İzleme Kapa"){
+      btn?.setAttribute("style","border: 3px solid rgba(49, 252, 76, 0.568)");
+      resim?.setAttribute("style","display:none;");
+      this.onIzleme="Ön İzleme Aç";
+    } 
+  }
 }

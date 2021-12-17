@@ -28,7 +28,8 @@ export class LoginComponent implements OnInit {
           
           this.alertifyservice.success("Giris Basarili Hos Geldiniz \n"+data.user.username);
           localStorage.setItem("Token",data.jwt);
-          environment.yetki=data.user.yetki;
+          localStorage.setItem("Yetki",data.user.yetki);
+          console.log(data);
             this.router.navigate(["products"]);
         })
       }
