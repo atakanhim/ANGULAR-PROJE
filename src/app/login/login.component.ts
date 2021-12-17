@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     else{
       try{
         this.accountService.login(this.model).subscribe(data=>{
+          
           this.alertifyservice.success("Giris Basarili Hos Geldiniz \n"+data.user.username);
           localStorage.setItem("Token",data.jwt);
           environment.yetki=data.user.yetki;

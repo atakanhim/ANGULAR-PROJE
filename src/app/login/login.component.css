@@ -37,3 +37,23 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.signInBtn{
+  width: 200px !important;
+  border-radius: 16px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  color: #0D6EFD;
+  transition: 0.5s;
+}
+.signInBtn:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.signOnBtn{
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.signOnBtn:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}

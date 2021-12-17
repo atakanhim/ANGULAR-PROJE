@@ -1,25 +1,24 @@
-<h3 class="headerTitle">Uye ol</h3>
-
-<form [formGroup] ="UserAddForm" (ngSubmit) = "addUser()" class="form-group">
-    <div class="input-group mb-3">
-        <input formControlName="username" class="form-control" placeholder="User Name"
+<main  class="form-signin">
+    <form [formGroup] ="UserAddForm" (ngSubmit) = "addUser()" class="form-group" style="text-align: center;">
+        <img class="mb-4" src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Üye Ol</h1>
+        <div class="form-floating">
+            <input formControlName="username" class="form-control" placeholder="User Name"
             name="username" id="username" required />
-        
-    </div>
-    <div *ngIf ="UserAddForm.get('usurname')?.hasError('required') && UserAddForm.get('usurname')?.dirty" class="alert alert-danger">Usur Name Zorunludur</div>
-    <div class="input-group mb-3">
-        <input formControlName="email" class="form-control" placeholder="Email"
+            <label for="floatingInput">User Name</label>
+        </div>
+        <div class="form-floating" style="margin-top: 3%;">
+            <input formControlName="email" class="form-control" placeholder="Email"
             name="Email" id="Email" required />
-        
-    </div>
-    <div *ngIf ="UserAddForm.get('email')?.hasError('required') && UserAddForm.get('email')?.dirty" class="alert alert-danger">Email Zorunludur</div>
-    <div class="input-group mb-3">
-        <input formControlName="password" class="form-control" placeholder="Password"
+            <label for="floatingInput">E-Mail</label>
+          </div>
+          <div class="form-floating" style="margin-top: 3%;">
+            <input type="password" formControlName="password" class="form-control" placeholder="Password"
             name="password" id="password" required />
-        
-    </div>
-    <div *ngIf ="UserAddForm.get('password')?.hasError('required') && UserAddForm.get('password')?.dirty" class="alert alert-danger">Password Zorunludur</div>
-   
-    <button type="submit" class="btn btn-primary" >Kayıt Ol</button>
-
-</form>
+            <label for="floatingInput">Password</label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" style="margin-top: 30px;">Sign In</button>
+          <p class="mt-5 mb-3 text-muted">&copy; 2021-2022</p>
+    
+    </form>
+</main>

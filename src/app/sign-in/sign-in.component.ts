@@ -19,14 +19,13 @@ export class SignInComponent implements OnInit {
   constructor(
     private formBuilder:FormBuilder,
     private accountService:AccountService,
-    private categoryService: CategoryService,
-    private productService: ProductService,
     private alertifyService: AlertifyService,
     private router:Router
   ) { }
   UserAddForm: FormGroup = new FormGroup({});
   usr:User = new User();
   ngOnInit(): void { 
+    this.UserAddForm.reset();
     this.createProductAddForm();
   }
   createProductAddForm(){

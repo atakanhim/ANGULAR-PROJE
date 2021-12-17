@@ -1,23 +1,7 @@
 {
   "products": [
     {
-      "name": "Dell Vostro 3500",
-      "description": "Intel Core i3 1115G4 8GB 256GB SSD Windows 10 Home 15.6' FHD Taşınabilir Bilgisayar",
-      "imageUrl": "https://productimages.hepsiburada.net/s/93/550/110000036235902.jpg/format:webp",
-      "price": 5300,
-      "categoryId": 1,
-      "id": 2
-    },
-    {
-      "id": 3,
-      "categoryId": 1,
-      "name": "Lenovo IdeaPad Gaming 3",
-      "price": 11200,
-      "description": "AMD Ryzen 5 5600H 8GB 512GB SSD GTX 1650 Freedos 15.6' FHD Taşınabilir Bilgisayar",
-      "imageUrl": "https://productimages.hepsiburada.net/s/89/550/110000031944107.jpg/format:webp"
-    },
-    {
-      "name": "Acer Nitro 51",
+      "name": "Acer Nitro 5133",
       "description": "Intel Core i5 10300H 8GB 256GB SSD GTX1650TI Freedos 15.6' FHD Taşınabilir Bilgisayar",
       "imageUrl": "https://productimages.hepsiburada.net/s/135/550/110000086172301.jpg/format:webp",
       "price": 11200,
@@ -81,12 +65,12 @@
       "imageUrl": "https://productimages.hepsiburada.net/s/133/550/110000084479318.jpg/format:webp"
     },
     {
-      "id": 12,
-      "categoryId": 4,
-      "name": "Samsung 50AU7000",
-      "price": 6600,
+      "name": "Samsung 50AU70001",
       "description": "Samsung 50AU7000 50' 125 Ekran Uydu Alıcılı Crystal 4K UHD Smart LED TV",
-      "imageUrl": "https://productimages.hepsiburada.net/s/94/550/110000036607848.jpg/format:webp"
+      "imageUrl": "https://productimages.hepsiburada.net/s/94/550/110000036607848.jpg/format:webp",
+      "price": 6600,
+      "categoryId": 4,
+      "id": 12
     },
     {
       "id": 13,

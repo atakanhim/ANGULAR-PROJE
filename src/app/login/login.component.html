@@ -11,8 +11,9 @@
         <input type="password" class="form-control" id="password" #password="ngModel" [(ngModel)]="model.password" name="password" placeholder="Şifre" required>
         <label for="floatingPassword">Password</label>
       </div>
-      <a class="nav-link"   routerLink="/app-sign-in/">Uye Ol</a>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign On</button>
+      <button class="w-100 btn btn-lg btn-primary signOnBtn"   type="submit">Sign On</button>
+      <a class="w-100 btn btn-lg btn-primary signInBtn" routerLink="/app-sign-in">Sign In</a>
+    
       <p class="mt-5 mb-3 text-muted">&copy; 2021-2022</p>
     </form>
   </main>
