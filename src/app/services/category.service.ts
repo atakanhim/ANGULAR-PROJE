@@ -9,7 +9,7 @@ export class CategoryService {
  
   constructor(private http: HttpClient) {}
  
- path = 'http://localhost:3000';
+  path = 'http://localhost:3000';
   //path = environment.API_URL; 
   getCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(this.path+"/categories").pipe(

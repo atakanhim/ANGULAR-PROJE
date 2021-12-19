@@ -37,8 +37,6 @@ export class LoginComponent implements OnInit {
         this.alertifyservice.warning("Lütfen Bilgileri Kontrol Ediniz");
       }
     }
-  
-   
     form.reset();// resetliyoruz yazılar siliniyor.
   }
   isAdmin(){
