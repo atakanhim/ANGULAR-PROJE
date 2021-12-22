@@ -32,7 +32,7 @@ export class ProductComponent implements OnInit {
         
             Object.assign(a,{quantity:1,total:a.price});
         });
-      
+       
       })
     })
   }

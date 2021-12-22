@@ -5,23 +5,28 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
+ 
   public cartItemList:any =[];
   public productList = new BehaviorSubject<any>([]);
-  constructor() { }
+  constructor() {
+    if(sessionStorage.getItem('cart')!=null){ // session dan veri cekme eger bos degilse
+      var cart:any = sessionStorage.getItem('cart');
+      cart = JSON.parse(cart);
+      console.log(cart);
+      this.cartItemList=cart;
+      this.productList.next(cart);
+    }
+   }
   getProducts(){
-    return this.productList.asObservable()
+    return this.productList.asObservable();//sepeti cagir
   }
-  setProduct(product:any){
-    this.cartItemList.push(...product);
-    this.productList.next(product)
-  } 
-  addToCart(product:any){
+  addToCart(product:any){// sepete ekle
     let varmi:any=this.cartItemCheck(product);
     if(varmi===0)
     this.cartItemPush(product);
 
   } 
-  cartItemCheck(product:any){
+  cartItemCheck(product:any){// cart itemın degerini cekiyoruz quantitysini
     let varmi:number = 0;
       this.cartItemList.forEach((x:any) => {
         if(product.id===x.id)
@@ -34,18 +39,19 @@ export class CartService {
     return varmi;
   }
   cartItemPush(product:any){
-    this.cartItemList.push(product);
+    this.cartItemList.push(product);//sepete pushlama
     this.productList.next(this.cartItemList);
     this.getTotalPrice();
+    sessionStorage.setItem("cart",JSON.stringify(this.cartItemList));
   }
-  getTotalPrice(){
+  getTotalPrice(){// sepetteki totel para
     let grandTotal = 0 ;
     this.cartItemList.map((a:any)=>{
       grandTotal += a.total
     })
     return grandTotal;
   }
-  removeCartItem(product:any){
+  removeCartItem(product:any){//sepetten silme
     this.cartItemList.map((a:any,index:any)=>{
       if((product.id===a.id) && (product.quantity>1))
           a.quantity--;
@@ -53,10 +59,13 @@ export class CartService {
         this.cartItemList.splice(index,1);
       }
     })
+    
     this.productList.next(this.cartItemList);
+    sessionStorage.setItem("cart",JSON.stringify(this.cartItemList));
   }
   removeAllCart(){
     this.cartItemList=[];
     this.productList.next(this.cartItemList);
+    sessionStorage.clear();
   }
 }

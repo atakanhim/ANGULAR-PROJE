@@ -25,12 +25,12 @@
       "imageUrl": "https://productimages.hepsiburada.net/s/89/550/110000031944107.jpg/format:webp"
     },
     {
-      "id": 4,
-      "categoryId": 1,
-      "name": "Acer Nitro 5",
-      "price": 11200,
+      "name": "Acer Nitro 5a",
       "description": "Intel Core i5 10300H 8GB 256GB SSD GTX1650TI Freedos 15.6' FHD Taşınabilir Bilgisayar",
-      "imageUrl": "https://productimages.hepsiburada.net/s/135/550/110000086172301.jpg/format:webp"
+      "imageUrl": "https://productimages.hepsiburada.net/s/135/550/110000086172301.jpg/format:webp",
+      "price": 11200,
+      "categoryId": 1,
+      "id": 4
     },
     {
       "id": 5,
@@ -121,12 +121,12 @@
       "imageUrl": "https://productimages.hepsiburada.net/s/122/550/110000071955830.jpg/format:webp"
     },
     {
-      "id": 17,
-      "categoryId": 4,
-      "name": "LG 49NANO816NA",
-      "price": 7000,
+      "name": "LG 49NANO816NAaaaa",
       "description": "LG 49NANO816NA 49' 124 Ekran Uydu Alıcılı 4K Ultra HD Smart LED TV",
-      "imageUrl": "https://productimages.hepsiburada.net/s/42/550/10724335747122.jpg/format:webp"
+      "imageUrl": "https://productimages.hepsiburada.net/s/42/550/10724335747122.jpg/format:webp",
+      "price": 7000,
+      "categoryId": 4,
+      "id": 17
     }
   ],
   "categories": [
