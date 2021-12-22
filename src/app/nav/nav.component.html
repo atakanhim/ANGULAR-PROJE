@@ -7,10 +7,10 @@ class=" navbar-dark sticky-top bg-dark p-0 shadow" style="width: 100%;height: 75
 <div class="navbar-nav" style="display: inline;float: right;margin-top: 15px;">
  
   <div class="nav-item text-nowrap">
-    <a *ngIf= "isLoggedin()==false" class="nav-link px-3" routerLink="/login">Login</a>
+    <a *ngIf= "isLoggedin()==false" class="nav-link px-3" routerLink="/login">Giriş Yap</a>
   </div>
   <div class="nav-item text-nowrap">
-    <a *ngIf= "isLoggedin()==true" (click)= "LogOut()" class="nav-link px-3" routerLink="/products">LogOut</a>
+    <a *ngIf= "isLoggedin()==true" (click)= "LogOut()" class="nav-link px-3" routerLink="/products">Çıkış Yap</a>
   </div>
   
 </div>
