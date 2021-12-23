@@ -9,8 +9,8 @@ export class CartService {
   public cartItemList:any =[];
   public productList = new BehaviorSubject<any>([]);
   constructor() {
-    if(sessionStorage.getItem('cart')!=null){ // session dan veri cekme eger bos degilse
-      var cart:any = sessionStorage.getItem('cart');
+    if(localStorage.getItem('cart')!=null){ // session dan veri cekme eger bos degilse
+      var cart:any = localStorage.getItem('cart');
       cart = JSON.parse(cart);
       console.log(cart);
       this.cartItemList=cart;
@@ -25,6 +25,7 @@ export class CartService {
     if(varmi===0)
     this.cartItemPush(product);
 
+    localStorage.setItem("cart",JSON.stringify(this.cartItemList));
   } 
   cartItemCheck(product:any){// cart itemın degerini cekiyoruz quantitysini
     let varmi:number = 0;
@@ -36,13 +37,15 @@ export class CartService {
              x.total=x.quantity*x.price;
             }
       });   
+
+
     return varmi;
   }
   cartItemPush(product:any){
     this.cartItemList.push(product);//sepete pushlama
     this.productList.next(this.cartItemList);
     this.getTotalPrice();
-    sessionStorage.setItem("cart",JSON.stringify(this.cartItemList));
+    
   }
   getTotalPrice(){// sepetteki totel para
     let grandTotal = 0 ;
@@ -61,11 +64,11 @@ export class CartService {
     })
     
     this.productList.next(this.cartItemList);
-    sessionStorage.setItem("cart",JSON.stringify(this.cartItemList));
+    localStorage.setItem("cart",JSON.stringify(this.cartItemList));
   }
   removeAllCart(){
     this.cartItemList=[];
     this.productList.next(this.cartItemList);
-    sessionStorage.clear();
+    localStorage.clear();
   }
 }

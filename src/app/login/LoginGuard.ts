@@ -16,7 +16,14 @@ export class LoginGuard implements CanActivate {
          if(logged && admin){        
             return true
          }
-         this.alertifyService.error("Bu Sayfaya Girmek Icin Admin Olmaniz Gerekyior");
+         else if(logged && route.routeConfig?.path=="app-checkout"){
+             return true;
+         }
+         else if(route.routeConfig?.path=="app-checkout")
+            this.alertifyService.error("Lütfen Önce Giriş Yapınız");
+         else
+            this.alertifyService.error("Bu Sayfaya Girmek Icin Admin Olmaniz Gerekyior");
+
          this.router.navigate(["login"]);
          return false;
     }

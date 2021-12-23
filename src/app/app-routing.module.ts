@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './login/LoginGuard';
 import { ProductAddForms2Component } from './product/product-add/product-add-forms2.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'products',component : ProductComponent},
   {path:'product-add',component : ProductAddForms2Component,canActivate:[LoginGuard]},
   {path:'product-edit',component : ProductDelComponent,canActivate:[LoginGuard]},
+  {path:'app-checkout',component : CheckoutComponent,canActivate:[LoginGuard]},
   {path:'login',component : LoginComponent},
   {path:'app-cart',component : CartComponent},
   {path:'app-sign-in',component : SignInComponent},
