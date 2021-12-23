@@ -1,4 +1,4 @@
-<div class="container px-4 py-5 mx-auto">
+<div class="container px-4 py-5 mx-auto" *ngIf="checkoutControl==false">
     <div class="row d-flex justify-content-center">
         <div class="col-5">
             <h4 class="heading">Shopping Bag</h4>
@@ -47,7 +47,7 @@
 
     <!--Cart Odeme Bolumu-->
     <div class="row justify-content-center">
-        <div class="card">
+        <div class="card2">
             <h6 class="text-uppercase">Billing Address</h6>
             <form [formGroup] ="AddAddressForm" class="form-group">
                 <div class="row px-2">
@@ -56,8 +56,14 @@
                     <div class="form-group col-md-4"> <label class="form-control-label">Şehir</label> <input type="text" id="city" formControlName="city" name="city" placeholder="İstanbul"> </div>
                 </div>
                 <div class="row px-2">
-                    <div class="form-group col-md-4"> <label class="form-control-label">İlçe</label> <input type="text" id="district" formControlName="district" name="district" placeholder="Zeytinburnu"> </div>
-                    <div class="form-group col-md-4"> <label class="form-control-label">Mahalle / Köy</label> <input type="text" id="neighborhood" formControlName="neighborhood" name="neighborhood" placeholder="Çırpıcı Mah."> </div>
+                    <div class="form-group col-md-3"> <label class="form-control-label">İlçe</label> <input type="text" id="district" formControlName="district" name="district" placeholder="Zeytinburnu"> </div>
+                    <div class="form-group col-md-3"> <label class="form-control-label">Mahalle / Köy</label> <input type="text" id="neighborhood" formControlName="neighborhood" name="neighborhood" placeholder="Çırpıcı Mah."> </div>
+                    <div class="form-group col-md-3"> <label class="form-control-label">Sokak</label> <input type="text" id="sokak" formControlName="sokak" name="sokak" placeholder="G-10 sokak"> </div>
+                    <div class="form-group col-md-3"> <label class="form-control-label">Kat</label> <input type="text" id="kat" formControlName="kat" name="kat" placeholder="13"> </div>
+                </div>
+                <div class="row px-2">
+                    <div class="form-group col-md-4"> <label class="form-control-label">Daire</label> <input type="text" id="daire" formControlName="daire" name="daire" placeholder="13"> </div>
+                    <div class="form-group col-md-4"> <label class="form-control-label">Bina No</label> <input type="text" id="binano" formControlName="binano" name="binano" placeholder="11"> </div>
                     <div class="form-group col-md-4"> <label class="form-control-label">Posta Kodu</label> <input type="number" id="postacode" formControlName="postacode" name="postacode" placeholder="34000"> </div>
                 </div>
                 <div class="row px-2">
@@ -67,19 +73,20 @@
             </form>
          
         </div>
+        
         <div class="col-lg-12">
-            <div class="card">
+            <div class="card2">
                 <div class="row">
                     <div class="col-lg-3 radio-group">
-                        <div class="row d-flex px-3 radio"> <img class="pay" src="https://i.imgur.com/WIAP9Ku.jpg">
+                        <div class="row d-flex px-3 radio "> <img class="pay" src="https://i.imgur.com/WIAP9Ku.jpg">
                             <p class="my-auto">Credit Card</p>
                         </div>
-                        <div class="row d-flex px-3 radio gray"> <img class="pay" src="https://i.imgur.com/OdxcctP.jpg">
+                        <!-- <div class="row d-flex px-3 radio gray"> <img class="pay" src="https://i.imgur.com/OdxcctP.jpg">
                             <p class="my-auto">Debit Card</p>
                         </div>
                         <div class="row d-flex px-3 radio gray mb-3"> <img class="pay" src="https://i.imgur.com/cMk1MtK.jpg">
                             <p class="my-auto">PayPal</p>
-                        </div>
+                        </div> -->
                     </div>
                    
                         <div class="col-lg-5">
@@ -98,9 +105,7 @@
                                 
                             </form>
                       
-                        </div>
-                 
-                    
+                        </div>         
                     
                     <div class="col-lg-4 mt-2">
                         <div class="row d-flex justify-content-between px-4">
@@ -120,4 +125,57 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container" style="text-align:  center;" *ngIf="checkoutControl">
+    <!--For Page-->
+<div class="bg">
+    <!--For Row containing all card-->
+    <div class="row mainRow" >
+        <!--Card 1-->
+        <div class="col-sm-8">
+            <div class="card card-cascade wider shadow p-3 mb- ">
+            
+                <!--Product Description-->
+                <div class="desc" style="width: 100%; text-align: center;">
+                    <div class="row subRow" style="font-size: 26px;font-family:'Times New Roman', Times, serif;margin-left: -4px;">
+                            <p>Bizi Tercih ettiğiniz için teşekürler <b>{{address.name}}</b><br>Siparişiniz 7 iş günü içerisinde size teslim edilecektir. </p>
+                            <h1>Sipariş Adresi:</h1>
+                            <p>
+                                {{address.neighborhood}} mah. {{address.sokak}} sokak ,Bina No : {{address.binano}} ,Kat : {{address.kat}} ,Daire: {{address.daire}} <br>
+                                <span>{{address.district}} / {{address.city}}</span>
+                                </p>
+                             <br>
+                            
+                       
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!--Card 2-->
+        <div class="col-sm-4">
+            <div class="card card-cascade card-ecommerce wider shadow p-3 mb-5 ">
+                <!--Card Body-->
+                <div class="card-body card-body-cascade" >
+                    <!--Card Description-->
+                    <div class="card2decs">
+                        <p class="heading1"><strong>Sepet Bilgisi</strong></p>
+                        <p class="quantity">Ürün Fiyatı <span class="float-right text1"> ₺{{productTotal}}</span></p>
+                        <p class="subtotal">Kargo Fiyatı<span class="float-right text1"> ₺{{shippingPrice}}</span></p>
+                        <p class="total"><strong>Toplam</strong><span class="float-right totalText1"><span class="totalText2"> ₺{{grandTotal}}</span></span></p>
+                    </div>
+                    <div class="payment">
+                        <p class="heading2"><strong>Sipariş Detayları</strong></p>
+                        <p class="cardAndExpire">Sipariş No</p>
+                        <p class="cardAndExpireValue">154649879832<span class="float-right">26/11</span></p>
+                        <p class="nameAndcvc" style="margin-bottom:-10px;">Kargo Takip No</p>
+                        <p class="nameAndcvcValue">Mr. Example<span class="float-right">15687496351</span></p>
+                    </div>
+                    <!--Card footer--> <a href="" class="purchaseLink">
+                        <div class="card-footer text-center"> Alışverişe Devam Et &#8594; </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>

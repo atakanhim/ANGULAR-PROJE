@@ -2,6 +2,12 @@ body {
     transition: 1s;
     font-size: .875rem;
   }
-
+.footer{
+  position: fixed;
+  width: 100%;
+  color: white;
+  left: 0px !important;
+  bottom: 0px !important;
+}
 
   

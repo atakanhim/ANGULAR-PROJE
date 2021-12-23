@@ -37,6 +37,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
+    
   ],
   providers: [AlertifyService,AccountService,LoginGuard],
   bootstrap: [AppComponent]

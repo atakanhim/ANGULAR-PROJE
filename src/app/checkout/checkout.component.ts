@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { eventListeners } from '@popperjs/core';
 import { AlertifyService } from '../services/alertify.service';
 import { CartService } from '../services/cart.service';
 import { Address } from './Address';
@@ -18,6 +19,7 @@ export class CheckoutComponent implements OnInit {
   public grandTotal :number=0;
   public shippingPrice :number=10;
   public productTotal :number=0;
+  public checkoutControl:boolean=false;
   address:Address = new Address();
   checkout:Checkout=new Checkout();
   constructor(private cartService:CartService,private alertifyService:AlertifyService, private formBuilder:FormBuilder,) { }
@@ -34,6 +36,7 @@ export class CheckoutComponent implements OnInit {
 
     })
   }
+
   createProductAddForm(){
     this.AddAddressForm = this.formBuilder.group({
       country:["",Validators.required],// dogrulayıcı
@@ -43,7 +46,12 @@ export class CheckoutComponent implements OnInit {
       neighborhood:["",Validators.required],
       postacode:["",Validators.required],// dogrulayıcı
       telno:["",Validators.required],
-      email:["",Validators.required]
+      email:["",Validators.required],
+      binano:["",Validators.required],// dogrulayıcı
+      kat:["",Validators.required],
+      daire:["",Validators.required],
+      sokak:["",Validators.required],
+
     });
     this.AddCheckoutForm = this.formBuilder.group({
       cardname:["",Validators.required],// dogrulayıcı
@@ -60,6 +68,10 @@ export class CheckoutComponent implements OnInit {
       console.log(this.checkout);
       console.log(this.address);
       this.alertifyService.success("Ödeme Başarılı");
+      this.AddCheckoutForm.reset();
+      this.AddAddressForm.reset();
+      this.cartService.removeAllCart();
+      this.checkoutControl=true;
     }
     else if(this.AddCheckoutForm.valid){
       this.alertifyService.warning("Adres Bilgilerini Doldurunuz");

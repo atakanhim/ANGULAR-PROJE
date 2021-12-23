@@ -45,7 +45,7 @@ body {
     padding-top: 15px
 }
 
-.card {
+.card2 {
     margin: 40px 0px;
     padding: 40px 50px;
     border-radius: 20px;
@@ -155,4 +155,132 @@ button:focus {
     .pad-left {
         padding-left: 20px
     }
+}
+.bg {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: #cccccc;
+    background-size: 100% 100%;
+    background-position: top center;
+    margin: auto
+}
+
+.mainRow {
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+p {
+    margin: 0px
+}
+
+.desc {
+    background-color: #f0edeb;
+    margin-top: 5%;
+    margin-left: 0;
+    margin-right: 50px;
+    margin-bottom: 4%
+}
+
+.card-body {
+    padding: 0;
+    margin: 0;
+    margin-top: 10%
+}
+
+div.card.main {
+    margin: 0px !important
+}
+
+.card {
+    padding: 0 !important;
+    margin-top: 40px
+}
+
+.quantity,
+.shipping,
+.promocode,
+.subtotal,
+.cardAndExpire,
+.nameAndcvc {
+    margin: 5%;
+    color: #6c757d !important
+}
+
+.heading1 {
+    margin: 5%;
+    font-size: 25px
+}
+
+.heading2 {
+    margin: 5%;
+    margin-top: 15%;
+    font-size: 20px
+}
+
+.payment {
+    background-color: #f0edeb;
+    padding: 3px;
+    margin-top: 15%
+}
+
+.text1 {
+    color: black;
+    font-weight: 700
+}
+
+.card-footer {
+    background-color: black;
+    color: white
+}
+
+.purchaseLink {
+    text-decoration: none
+}
+
+.row1 {
+    font-size: 12px
+}
+
+.row2 {
+    font-weight: 600
+}
+
+.subRow {
+    margin-left: 10%;
+    margin-bottom: 2%;
+    margin-top: 5%
+}
+
+p.cardAndExpireValue,
+p.nameAndcvcValue {
+    margin: 5%;
+    margin-bottom: 10%;
+    font-weight: 600
+}
+
+p.nameAndcvc,
+p.cardAndExpire {
+    margin-bottom: -10px
+}
+
+.total {
+    margin: 5%
+}
+
+.totalText {
+    font-weight: 700
+}
+
+.totalText2 {
+    font-weight: 700;
+    font-size: 30px
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    height: 430px
 }
