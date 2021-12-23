@@ -49,21 +49,20 @@
     <div class="row justify-content-center">
         <div class="card">
             <h6 class="text-uppercase">Billing Address</h6>
-            <form>
+            <form [formGroup] ="AddAddressForm" class="form-group">
                 <div class="row px-2">
-                    <div class="form-group col-md-4"> <label class="form-control-label">Ülke</label> <input type="text" id="ulke" name="ulke" placeholder="Türkiye"> </div>
-                    <div class="form-group col-md-4"> <label class="form-control-label">Ad ve Soyadı</label> <input type="text" id="ulke" name="ulke" placeholder="John F. Kennedy"> </div>
-                    <div class="form-group col-md-4"> <label class="form-control-label">Şehir</label> <input type="text" id="name" name="name" placeholder="İstanbul"> </div>
+                    <div class="form-group col-md-4"> <label class="form-control-label">Ülke</label> <input type="text" id="country" formControlName="country" name="country" placeholder="Türkiye"> </div>
+                    <div class="form-group col-md-4"> <label class="form-control-label">Ad ve Soyadı</label> <input type="text" id="name" formControlName="name" name="name" placeholder="John F. Kennedy"> </div>
+                    <div class="form-group col-md-4"> <label class="form-control-label">Şehir</label> <input type="text" id="city" formControlName="city" name="city" placeholder="İstanbul"> </div>
                 </div>
                 <div class="row px-2">
-                    <div class="form-group col-md-4"> <label class="form-control-label">İlçe</label> <input type="text" id="ilce" name="ilce" placeholder="Zeytinburnu"> </div>
-                    <div class="form-group col-md-4"> <label class="form-control-label">Mahalle / Köy</label> <input type="text" id="mahalle" name="mahalle" placeholder="Zeytinli"> </div>
-                    <div class="form-group col-md-4"> <label class="form-control-label">Posta Kodu</label> <input type="text" id="postakodu" name="postakodu" placeholder="34000"> </div>
+                    <div class="form-group col-md-4"> <label class="form-control-label">İlçe</label> <input type="text" id="district" formControlName="district" name="district" placeholder="Zeytinburnu"> </div>
+                    <div class="form-group col-md-4"> <label class="form-control-label">Mahalle / Köy</label> <input type="text" id="neighborhood" formControlName="neighborhood" name="neighborhood" placeholder="Çırpıcı Mah."> </div>
+                    <div class="form-group col-md-4"> <label class="form-control-label">Posta Kodu</label> <input type="number" id="postacode" formControlName="postacode" name="postacode" placeholder="34000"> </div>
                 </div>
                 <div class="row px-2">
-                    <div class="form-group col-md-4"> <label class="form-control-label">Telefon No</label> <input type="text" id="telno" name="telno" placeholder="555-555-55-**"> </div>
-                    <div class="form-group col-md-4"> <label class="form-control-label">E-Mail</label> <input type="text" id="email" name="email" placeholder="jfkennedy@gmail.com"> </div>
-                    <div class="form-group col-md-4"> <label class="form-control-label">Posta Kodu</label> <input type="text" id="cvv" name="cvv" placeholder="Zeytinli"> </div>
+                    <div class="form-group col-md-6"> <label class="form-control-label">Telefon No</label> <input type="number" id="telno" name="telno" formControlName="telno" placeholder="555-555-55-**"> </div>
+                    <div class="form-group col-md-6"> <label class="form-control-label">E-Mail</label> <input type="text" id="email" name="email" formControlName="email" placeholder="jfkennedy@gmail.com"> </div>  
                 </div>
             </form>
          
@@ -82,16 +81,26 @@
                             <p class="my-auto">PayPal</p>
                         </div>
                     </div>
-                    <div class="col-lg-5">
-                        <div class="row px-2">
-                            <div class="form-group col-md-6"> <label class="form-control-label">Name on Card</label> <input type="text" id="cname" name="cname" placeholder="Johnny Doe"> </div>
-                            <div class="form-group col-md-6"> <label class="form-control-label">Card Number</label> <input type="text" id="cnum" name="cnum" placeholder="1111 2222 3333 4444"> </div>
+                   
+                        <div class="col-lg-5">
+                            <form [formGroup] ="AddCheckoutForm" (ngSubmit) = "Checkout()" class="form-group">
+                                <div class="row px-2">
+                                    <div class="form-group col-md-6"> <label class="form-control-label">Name on Card</label> <input type="text" id="cardname" formControlName="cardname" name="cardname" placeholder="Johnny Doe"> </div>
+                                    <div class="form-group col-md-6"> <label class="form-control-label">Card Number</label> <input type="number" id="cardnumber" formControlName="cardnumber" name="cardnumber" placeholder="1111 2222 3333 4444"> </div>
+                                </div>
+                                <div class="row px-2">
+                                    <div class="form-group col-md-6"> <label class="form-control-label">Expiration Date</label> <input type="date" id="expirationdate" formControlName="expirationdate" name="expirationdate" placeholder="MM/YYYY"> </div>
+                                    <div class="form-group col-md-6"> <label class="form-control-label">CVV</label> <input type="number" id="cvv" name="cvv" formControlName="cvv" placeholder="***"> </div>
+                                </div>
+                                <div class="row px-2">
+                                    <button type="submit" style="margin: 30px auto; width: 85px;" class="btn-block btn-blue"> <span> <span id="checkout">Checkout</span>  </span> </button>
+                                </div>
+                                
+                            </form>
+                      
                         </div>
-                        <div class="row px-2">
-                            <div class="form-group col-md-6"> <label class="form-control-label">Expiration Date</label> <input type="text" id="exp" name="exp" placeholder="MM/YYYY"> </div>
-                            <div class="form-group col-md-6"> <label class="form-control-label">CVV</label> <input type="text" id="cvv" name="cvv" placeholder="***"> </div>
-                        </div>
-                    </div>
+                 
+                    
                     
                     <div class="col-lg-4 mt-2">
                         <div class="row d-flex justify-content-between px-4">
@@ -105,7 +114,7 @@
                         <div class="row d-flex justify-content-between px-4" id="tax">
                             <p class="mb-1 text-left">Toplam</p>
                             <h6 class="mb-1 text-right">₺{{grandTotal}}</h6>
-                        </div> <button class="btn-block btn-blue"> <span> <span id="checkout">Checkout</span> <span id="check-amt">$26.48</span> </span> </button>
+                        </div> 
                     </div>
                 </div>
             </div>
