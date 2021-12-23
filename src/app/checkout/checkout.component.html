@@ -1,7 +1,7 @@
 <div class="container px-4 py-5 mx-auto" *ngIf="checkoutControl==false ">
     <div class="row d-flex justify-content-center">
         <div class="col-5">
-            <h4 class="heading">Shopping Bag</h4>
+            <h4 class="heading">Alışveriş Sepetim</h4>
         </div>
         <div class="col-7">
             <div class="row text-right">
@@ -139,11 +139,11 @@
                 <div class="form-control-label" style="width: 100%;margin-left: -10px;">
                     <div class="row subRow" style="font-size: 20px;font-family:'Times New Roman', Times, serif;margin-left: -4px;">                                
                            
-                                 <strong style="text-align: center;">Bizi Tercih ettiğiniz için teşekürler atakan him<b style="text-transform: uppercase;">{{address.name}}</b><br><br>
+                                 <strong style="text-align: center;">Bizi Tercih ettiğiniz için teşekürler <b style="text-transform: uppercase;">{{address.name}}</b><br><br>
                                     Siparişiniz 7 iş günü içerisinde size teslim edilecektir.<br> </strong>
                                 <h1 style="float: left; margin-left: 10px;"><br>Sipariş Adresi;</h1>
                                     <strong style="margin-left: 10px;">
-                                           lorem
+                                           
                                     {{address.neighborhood}} mah. {{address.sokak}} sokak ,Bina No : {{address.binano}} ,Kat : {{address.kat}} ,Daire: {{address.daire}} <br>
                                     <span>{{address.district}} / {{address.city}}</span></strong>
                               
@@ -169,7 +169,7 @@
                         <p class="cardAndExpire">Sipariş No</p>
                         <p class="cardAndExpireValue">154649879832<span class="float-right">26/11</span></p>
                         <p class="nameAndcvc" style="margin-bottom:-10px;">Kargo Takip No</p>
-                        <p class="nameAndcvcValue">Mr. Example<span class="float-right">15687496351</span></p>
+                        <p class="nameAndcvcValue"><span class="float-right">15687496351</span></p>
                     </div>
                     <!--Card footer--> <a href="" class="purchaseLink">
                         <div class="card-footer text-center" (click)="alisverisiTamamla()"> Alışverişi Tamamla Ve Devam Et &#8594; </div>
