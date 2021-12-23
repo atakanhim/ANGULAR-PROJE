@@ -23,18 +23,17 @@ export class CheckoutComponent implements OnInit {
   address:Address = new Address();
   checkout:Checkout=new Checkout();
   constructor(private cartService:CartService,private alertifyService:AlertifyService, private formBuilder:FormBuilder,) { }
-   
+  
   ngOnInit(): void {
     this.createProductAddForm();
-    this.cartService.getProducts()
-    .subscribe(res=>{
-      this.products =res;
-      this.productTotal=this.cartService.getTotalPrice();
-      if(this.productTotal>10000)
-      this.shippingPrice=0;
-      this.grandTotal=this.productTotal+this.shippingPrice;
-
-    })
+      this.cartService.getProducts()
+      .subscribe(res=>{
+        this.products =res;
+        this.productTotal=this.cartService.getTotalPrice();
+        if(this.productTotal>10000)
+        this.shippingPrice=0;
+        this.grandTotal=this.productTotal+this.shippingPrice
+      })
   }
 
   createProductAddForm(){
@@ -61,6 +60,9 @@ export class CheckoutComponent implements OnInit {
     });
     
   }
+  alisverisiTamamla(){
+    this.cartService.removeAllCart();
+  }
   Checkout(){
     if(this.AddCheckoutForm.valid && this.AddAddressForm.valid){
       this.checkout=this.AddCheckoutForm.value as Checkout;
@@ -70,7 +72,8 @@ export class CheckoutComponent implements OnInit {
       this.alertifyService.success("Ödeme Başarılı");
       this.AddCheckoutForm.reset();
       this.AddAddressForm.reset();
-      this.cartService.removeAllCart();
+
+   
       this.checkoutControl=true;
     }
     else if(this.AddCheckoutForm.valid){

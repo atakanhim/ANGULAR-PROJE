@@ -8,7 +8,7 @@ export class Address{
     telno!:number;
     sokak!:string;
     email!:string;
-    daire!:string;
+    daire!:number;
     kat!:number;
     binano!:number;
 }

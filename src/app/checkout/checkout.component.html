@@ -1,4 +1,4 @@
-<div class="container px-4 py-5 mx-auto" *ngIf="checkoutControl==false">
+<div class="container px-4 py-5 mx-auto" *ngIf="checkoutControl==false ">
     <div class="row d-flex justify-content-center">
         <div class="col-5">
             <h4 class="heading">Shopping Bag</h4>
@@ -59,16 +59,16 @@
                     <div class="form-group col-md-3"> <label class="form-control-label">İlçe</label> <input type="text" id="district" formControlName="district" name="district" placeholder="Zeytinburnu"> </div>
                     <div class="form-group col-md-3"> <label class="form-control-label">Mahalle / Köy</label> <input type="text" id="neighborhood" formControlName="neighborhood" name="neighborhood" placeholder="Çırpıcı Mah."> </div>
                     <div class="form-group col-md-3"> <label class="form-control-label">Sokak</label> <input type="text" id="sokak" formControlName="sokak" name="sokak" placeholder="G-10 sokak"> </div>
-                    <div class="form-group col-md-3"> <label class="form-control-label">Kat</label> <input type="text" id="kat" formControlName="kat" name="kat" placeholder="13"> </div>
+                    <div class="form-group col-md-3"> <label class="form-control-label">Kat</label> <input type="number" id="kat" formControlName="kat" name="kat" placeholder="13"> </div>
                 </div>
                 <div class="row px-2">
-                    <div class="form-group col-md-4"> <label class="form-control-label">Daire</label> <input type="text" id="daire" formControlName="daire" name="daire" placeholder="13"> </div>
-                    <div class="form-group col-md-4"> <label class="form-control-label">Bina No</label> <input type="text" id="binano" formControlName="binano" name="binano" placeholder="11"> </div>
+                    <div class="form-group col-md-4"> <label class="form-control-label">Daire</label> <input type="number" id="daire" formControlName="daire" name="daire" placeholder="13"> </div>
+                    <div class="form-group col-md-4"> <label class="form-control-label">Bina No</label> <input type="number" id="binano" formControlName="binano" name="binano" placeholder="11"> </div>
                     <div class="form-group col-md-4"> <label class="form-control-label">Posta Kodu</label> <input type="number" id="postacode" formControlName="postacode" name="postacode" placeholder="34000"> </div>
                 </div>
                 <div class="row px-2">
                     <div class="form-group col-md-6"> <label class="form-control-label">Telefon No</label> <input type="number" id="telno" name="telno" formControlName="telno" placeholder="555-555-55-**"> </div>
-                    <div class="form-group col-md-6"> <label class="form-control-label">E-Mail</label> <input type="text" id="email" name="email" formControlName="email" placeholder="jfkennedy@gmail.com"> </div>  
+                    <div class="form-group col-md-6"> <label class="form-control-label">E-Mail</label> <input type="email" id="email" name="email" formControlName="email" placeholder="jfkennedy@gmail.com"> </div>  
                 </div>
             </form>
          
@@ -126,7 +126,7 @@
         </div>
     </div>
 </div>
-<div class="container" style="text-align:  center;" *ngIf="checkoutControl">
+<div class="container" *ngIf="checkoutControl">
     <!--For Page-->
 <div class="bg">
     <!--For Row containing all card-->
@@ -136,16 +136,17 @@
             <div class="card card-cascade wider shadow p-3 mb- ">
             
                 <!--Product Description-->
-                <div class="desc" style="width: 100%; text-align: center;">
-                    <div class="row subRow" style="font-size: 26px;font-family:'Times New Roman', Times, serif;margin-left: -4px;">
-                            <p>Bizi Tercih ettiğiniz için teşekürler <b>{{address.name}}</b><br>Siparişiniz 7 iş günü içerisinde size teslim edilecektir. </p>
-                            <h1>Sipariş Adresi:</h1>
-                            <p>
-                                {{address.neighborhood}} mah. {{address.sokak}} sokak ,Bina No : {{address.binano}} ,Kat : {{address.kat}} ,Daire: {{address.daire}} <br>
-                                <span>{{address.district}} / {{address.city}}</span>
-                                </p>
-                             <br>
-                            
+                <div class="form-control-label" style="width: 100%;margin-left: -10px;">
+                    <div class="row subRow" style="font-size: 20px;font-family:'Times New Roman', Times, serif;margin-left: -4px;">                                
+                           
+                                 <strong style="text-align: center;">Bizi Tercih ettiğiniz için teşekürler atakan him<b style="text-transform: uppercase;">{{address.name}}</b><br><br>
+                                    Siparişiniz 7 iş günü içerisinde size teslim edilecektir.<br> </strong>
+                                <h1 style="float: left; margin-left: 10px;"><br>Sipariş Adresi;</h1>
+                                    <strong style="margin-left: 10px;">
+                                           lorem
+                                    {{address.neighborhood}} mah. {{address.sokak}} sokak ,Bina No : {{address.binano}} ,Kat : {{address.kat}} ,Daire: {{address.daire}} <br>
+                                    <span>{{address.district}} / {{address.city}}</span></strong>
+                              
                        
                     </div> 
                 </div>
@@ -171,7 +172,7 @@
                         <p class="nameAndcvcValue">Mr. Example<span class="float-right">15687496351</span></p>
                     </div>
                     <!--Card footer--> <a href="" class="purchaseLink">
-                        <div class="card-footer text-center"> Alışverişe Devam Et &#8594; </div>
+                        <div class="card-footer text-center" (click)="alisverisiTamamla()"> Alışverişi Tamamla Ve Devam Et &#8594; </div>
                     </a>
                 </div>
             </div>
