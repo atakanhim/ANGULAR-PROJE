@@ -1,6 +1,6 @@
 <main  class="form-signin">
     <form #loginForm="ngForm" (ngSubmit)= "login(loginForm)"style="text-align: center;">
-      <img class="mb-4" src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+      <img class="mb-4" src="../../assets/galeri/login.png" alt="" width="100" height="100">
       <h1 class="h3 mb-3 fw-normal">Giriş Yap</h1>
   
       <div class="form-floating">
@@ -9,7 +9,7 @@
       </div>
       <div class="form-floating" style="margin-top: 3%;">
         <input type="password" class="form-control" id="password" #password="ngModel" [(ngModel)]="model.password" name="password" placeholder="Şifre" required>
-        <label for="floatingPassword">Password</label>
+        <label for="floatingPassword">Şifre</label>
       </div>
       <button class="w-100 btn btn-lg btn-primary signOnBtn"   type="submit">Giriş Yap</button>
       <a class="w-100 btn btn-lg btn-primary signInBtn" routerLink="/app-sign-in">Kayıt Ol</a>

@@ -12,7 +12,6 @@ import { Login } from './login';
 })
 export class LoginComponent implements OnInit {
   model:Login = new Login();
-  adminControl:boolean=false;
   constructor(private accountService:AccountService,private alertifyservice:AlertifyService,private router:Router) { }
 
   ngOnInit(): void {
@@ -39,7 +38,5 @@ export class LoginComponent implements OnInit {
     }
     form.reset();// resetliyoruz yazılar siliniyor.
   }
-  isAdmin(){
-    return this.adminControl;
-  }
+  
 }

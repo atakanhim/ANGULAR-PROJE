@@ -17,12 +17,12 @@
       "imageUrl": "https://productimages.hepsiburada.net/s/93/550/110000036235902.jpg/format:webp"
     },
     {
-      "id": 3,
-      "categoryId": 1,
       "name": "Lenovo IdeaPad Gaming 3",
-      "price": 11200,
       "description": "AMD Ryzen 5 5600H 8GB 512GB SSD GTX 1650 Freedos 15.6' FHD Taşınabilir Bilgisayar",
-      "imageUrl": "https://productimages.hepsiburada.net/s/89/550/110000031944107.jpg/format:webp"
+      "imageUrl": "https://productimages.hepsiburada.net/s/89/550/110000031944107.jpg/format:webp",
+      "price": 11200,
+      "categoryId": 1,
+      "id": 3
     },
     {
       "name": "Acer Nitro 5a",
@@ -127,6 +127,14 @@
       "price": 7000,
       "categoryId": 4,
       "id": 17
+    },
+    {
+      "name": "Telefon",
+      "description": "iPhone 16 pro max",
+      "imageUrl": "https://productimages.hepsiburada.net/s/66/200-200/110000007422583.jpg",
+      "price": "35000",
+      "categoryId": "2",
+      "id": 18
     }
   ],
   "categories": [

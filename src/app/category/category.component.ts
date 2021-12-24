@@ -11,7 +11,6 @@ import { Category } from './category';
 })
 export class CategoryComponent implements OnInit {
   constructor(  
-    private accountservice:AccountService,  
     private categoryService:CategoryService)
      {}
      
