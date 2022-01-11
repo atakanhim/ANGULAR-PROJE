@@ -1,20 +1,12 @@
 {
   "products": [
     {
-      "id": 1,
-      "categoryId": 1,
-      "name": "Asus X509UA-BR325",
-      "price": 4999,
+      "name": "Asus X509UA-BR325adas",
       "description": "Intel Core i3 7020U 4GB 256GB SSD Freedos 15.6' Taşınabilir Bilgisayar ",
-      "imageUrl": "https://productimages.hepsiburada.net/s/105/550/110000049060019.jpg/format:webp"
-    },
-    {
-      "id": 2,
+      "imageUrl": "https://productimages.hepsiburada.net/s/105/550/110000049060019.jpg/format:webp",
+      "price": 4999,
       "categoryId": 1,
-      "name": "Dell Vostro 3500",
-      "price": 5300,
-      "description": "Intel Core i3 1115G4 8GB 256GB SSD Windows 10 Home 15.6' FHD Taşınabilir Bilgisayar",
-      "imageUrl": "https://productimages.hepsiburada.net/s/93/550/110000036235902.jpg/format:webp"
+      "id": 1
     },
     {
       "name": "Lenovo IdeaPad Gaming 3",
@@ -135,6 +127,14 @@
       "price": "35000",
       "categoryId": "2",
       "id": 18
+    },
+    {
+      "name": "Teleefof",
+      "description": "telefon g7asdsad dir androiddir",
+      "imageUrl": "https://productimages.hepsiburada.net/s/66/200-200/110000007422583.jpg",
+      "price": "1313131",
+      "categoryId": "2",
+      "id": 19
     }
   ],
   "categories": [
