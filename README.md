@@ -33,5 +33,4 @@
 
 `ng serve --open` server açılacak bekleyin ve bitti bu kaaa
 
-## ATTENTION PLEASE !!
- #### DEGİŞİKLİK YAPIP İMPORT ETMEYİN EDİCEKSENİZ KENDİ BRANCHİNİZİ AÇIP ONA İMPORT EDİN MAİN BRANCH E ATMAYIN
+
