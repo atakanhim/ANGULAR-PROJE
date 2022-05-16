@@ -27,7 +27,7 @@ Cart Details
 
 # YOU MUST HAVE NODE.JS INSTALLED ON YOUR COMPUTER GO INSTALL AND COME
 
-###  CMD'yi açın ve aşağıdakini yazın
+### Open CMD and type the following
    `npm i -g json-server` &
    `npm install -g @angular/cli` 
    
@@ -49,7 +49,14 @@ Later on
  `json-server shop.json` json-server aktifediyoruz 3000. portta
 - open a new terminal, don't close the other, keep it open
 
-`ng serve --open` server açılacak bekleyin ve bitti bu kadar
+`ng serve --open` wait the server will open 
 
+AND
 
+# !!You need to install https://strapi.io/ for authorization
 
+`npx create-strapi-app@latest my-project --quickstart` after 
+
+then you need to give authorization parameter to your user table.
+![image](https://user-images.githubusercontent.com/52455771/168699917-f7085f80-c30a-4c4a-9582-71911570cc19.png)
+and that's it.
